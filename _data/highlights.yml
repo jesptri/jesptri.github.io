@@ -1,18 +1,16 @@
-- id: world-labs-dec2024
-  title: "Generating Worlds"
-  organization: "World Labs"
-  date: "December 2024"
-  description: "Transform a single image into an explorable 3D world using generative AI."
-  url: "https://www.worldlabs.ai/blog"
+- id: salomon_internship_2025
+  title: "Software Engineer internship at Salomon"
+  organization: "Salomon"
+  date: "February 2025 - July 2025"
+  url: "/highlights/salomon-internship-2025/"
   image: "world-labs.jpg"
   video: "worldlabs-dec2.mp4"
 
-- id: google-3d-shopping-may2025
-  title: "Generating 3D Products"
-  organization: "Google Research"
-  date: "May 2025"
-  description: "Transform a few photos into interactive 3D shopping experiences using generative AI."
-  url: "https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/"
+- id: cnsnmm_internship_2024
+  title: "Software Engineer internship at CNSN"
+  organization: "Centre National de Ski Nordique et de Moyenne Montagne"
+  date: "February 2024 - July 2024"
+  url: "/highlights/cnsnmm-internship-2024/"
   image: "google-3d-shopping.jpg"
   video: "google-3d-products.mp4"
   tags:

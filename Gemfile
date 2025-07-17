@@ -1,11 +1,11 @@
-# frozen_string_literal: true
+source 'https://rubygems.org'
 
-source "https://rubygems.org"
+gem 'jekyll', '~> 4.3.3'
 
-# gem "rails"
+gem 'csv'
 
-gem "webrick", "~> 1.8"
+gem "minima"
 
-gem "jekyll", "~> 4.3"
+gem 'base64', '~> 0.3.0'
 
-gem "minima", "~> 2.5"
+gem 'safe_yaml'
