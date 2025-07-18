@@ -4,25 +4,16 @@
   description: "3D relighting by distilling samples from a 2D image relighting diffusion model into a latent-variable NeRF."
   project_page: https://illuminerf.github.io
   arxiv: 2406.06527
-  image: illuminerf_before.jpg
-  image_mouseover: illuminerf_after.mp4
-  authors:
-    - xiaomingzhao
-    - pratuls
-    - dorverbin
-    - keunhong
-    - rmbrualla
-    - phenzler
+  image: sokoban.jpg
 
-- id: hypernerf
-  title: "CamP: Camera Preconditioning for Neural Radiance Fields"
+- id: Hack Days ENS
+  title: "Hack Days ENS"
   venue: SIGGRAPH Asia, 2023
   description: "Preconditioning camera optimization during NeRF training significantly improves their ability to jointly recover the scene and camera parameters."
   project_page: "https://camp-nerf.github.io"
   github: jonbarron/camp_zipnerf
   arxiv: 2308.10902
   image: camp_before.jpg
-  image_mouseover: camp_after.mp4
   authors:
     - keunhong
     - phenzler

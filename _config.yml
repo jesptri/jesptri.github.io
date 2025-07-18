@@ -24,17 +24,17 @@ position: Student in Data Science and Software Engineering
 email: julespinoux@gmail.com
 description: |
   I'm an engineering student at ISAE-Supaero (top 5 engineering school in France) in my final year.
-  In September, I will follow the Data and Decision Sciences program, which is a Master-level specialization in Data Science, modern Artificial Intelligence and Decision Support:
+  In September, I will follow the Data and Decision Sciences program, which is a Master-level specialization in Data Science, modern Artificial Intelligence and Decision Support.
 
-  Algorithms in Machine Learning (Supervised, unsupervised, deep, and reinforcement learning) 💻
-  Data Engineering (Data storage, computation, and distribution) 💾
-  Applied Data Science (Data privacy and ethics, the digital economy, and applications of data science) 📑
-  Seminars (Seminars from professional experts, training sessions, and challenges) 🏢
+# Algorithms in Machine Learning (Supervised, unsupervised, deep, and reinforcement learning) 💻
+# Data Engineering (Data storage, computation, and distribution) 💾
+# Applied Data Science (Data privacy and ethics, the digital economy, and applications of data science) 📑
+# Seminars (Seminars from professional experts, training sessions, and challenges) 🏢
 
 collections:
-  highlights:
+  internships:
     output: true
-    permalink: /highlights/:name/
+    permalink: /internships/:name/
 
 
 #   My current research interests are primarily in 3D generative AI and diffusion models.

@@ -33,7 +33,7 @@ During this 6-month internship, I was part of the **Mobile & Digital Experience 
 
 ## 🧰 Tech Stack
 
-- **Flutter**, **Node.js**, **AWS Lambda**, **API Gateway**, **DynamoDB**, **S3**, **GitHub Actions**, **App Store / Play Store pipelines**
+- **Flutter**, **Node.js**, **AWS (Lambda, DynamoDB, S3, API Gateway, etc)**, **GitLab CI/CD**, **Fastlane**
 
 ---
 
