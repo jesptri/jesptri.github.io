@@ -7,41 +7,45 @@ tags: ["Mobile", "Flutter", "Serverless", "UX", "CI/CD"]
 
 ## 🏔️ About Salomon
 
-<a href="https://www.salomon.com" target="_blank"><strong>Salomon</strong></a> is a global leader in outdoor sports gear, known for its high-performance products in trail running, skiing, hiking, and more. Headquartered in Annecy, in the French Alps, the brand is at the crossroads of innovation, technology, and user-centered design.
+<a href="https://www.salomon.com" target="_blank"><strong>Salomon</strong></a> is a global leader in outdoor sports gear 🥾⛷️, known for its high-performance products in trail running, skiing, hiking, and more. Headquartered in Annecy 🇫🇷, in the heart of the French Alps 🏞️, the brand sits at the intersection of innovation, technology, and user-centered design 🎯.
 
 ---
 
 ## 📱 What I Worked On
 
-During this 6-month internship, I was part of the **Mobile & Digital Experience team**, working at the intersection of product, tech, and UX. My main contributions:
+During this 6-month internship 👨‍💻, I was part of the **IT team**.
 
-- I developed a beta mobile application using **Flutter** for both iOS and Android, which expanded the tester base from 8 to over 120 users. This significantly accelerated feedback loops and **tripled feature validation speed**.
+- I took part in developing a beta mobile application for both iOS and Android 📲. Initially tested by a handful of users, the app was later released to Salomon’s internal testers to gather valuable feedback 🔄.
 
-- I led the end-to-end development of core mobile features, and built **serverless REST APIs** with **Node.js** (AWS Lambda). I designed scalable data flows using **DynamoDB** and **S3**, ensuring fast and reliable performance.
+- I led the end-to-end development of key mobile features and was also responsible for managing the backend 🔧.
 
-- I automated multi-environment deployments and set up **CI/CD pipelines**, including release processes for both the **App Store** and **Google Play Store** — bringing the app closer to public readiness.
+- I set up three separate environments (dev/staging/prod) for the front-end, allowing me to dive deep into critical concepts such as **Auth0 authentication**, **CI/CD with GitLab**, and more 🔐⚙️.
+
+- I automated the Play Store deployment using **GitLab CI/CD pipelines** and **Fastlane** 🚀 — a key milestone for the project, and something I’m genuinely proud of achieving 🎉!
 
 ---
 
-## 👥 Teamwork & UX
+## 👥 Collaboration & Teamwork
 
-- I worked hand-in-hand with a **UX designer**, co-led ideation workshops, and conducted over **10 user interviews** to iterate on features based on real feedback.
+This experience was markedly different from my previous internship at CNSNMM 🏔️.
 
-- I took part in **daily Agile stand-ups**, sprint reviews, retrospectives, and planning meetings — gaining strong, hands-on experience with the **Scrum** methodology in a fast-moving tech/product team.
+I had the chance to work with:
+
+- A **Senior Software Engineer** who mentored me throughout the internship (while working on other projects too). He acted as our **Product Owner** and occasionally contributed to development .
+
+- A **UX Designer**, with whom I collaborated closely. We held monthly feedback sessions to refine the user experience and co-led ideation workshops and user interviews to iterate on features.
+
+- **PhD students** working on AI-based training plans. I integrated their data collection requirements into the app to support the future implementation of their algorithms.
+
+- I took part in **daily Agile stand-ups** within the broader IT team, which helped me build a solid understanding of Agile methodology 📅.
+
+- Beyond my direct tasks, I proactively engaged with various IT professionals at Salomon, including **developers**, **DevOps**, **IT architects**, **data scientists**, **data engineers**, **analysts**, and **product owners** 🧑‍💼💬. These discussions gave me invaluable insights into both **Salomon’s tech landscape** and its overall business model.
 
 ---
 
 ## 🧰 Tech Stack
 
-- **Flutter**, **Node.js**, **AWS (Lambda, DynamoDB, S3, API Gateway, etc)**, **GitLab CI/CD**, **Fastlane**
-
----
-
-## 🧠 What I Took Away
-
-This internship taught me how to ship features from **idea to production**, with a full-stack view — both technically and from a user experience standpoint. It also gave me insight into the real-life pace of product iteration in an industrial setting, and how much thought and polish go into seemingly simple features.
-
-It was also a unique experience working at **Salomon’s headquarters** in the French Alps, surrounded by athletes, gear designers, and product testers — a truly outdoor-first environment with a strong tech mindset.
+- **Flutter**, **Node.js**, **AWS**, **Serverless**, **GitLab CI/CD**, **Fastlane**
 
 ---
 
@@ -50,6 +54,6 @@ It was also a unique experience working at **Salomon’s headquarters** in the F
 <figure style="text-align: center; max-width: 400px; margin: auto;">
   <img src="/images/salomon-app.jpg" alt="Salomon Beta App UI" style="width: 100%; border-radius: 8px;">
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
-    Early beta version of the mobile app I worked on — developed with Flutter and tested by 100+ internal users across Europe.
+    Early beta version of the mobile app I developed — built with Flutter and tested by 100+ internal users across Europe 🌍.
   </figcaption>
 </figure>
