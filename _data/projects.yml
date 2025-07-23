@@ -1,24 +1,25 @@
 - id: sokoban
-  title: "Sokoban"
-  venue: NeurIPS, 2024
-  description: "3D relighting by distilling samples from a 2D image relighting diffusion model into a latent-variable NeRF."
-  project_page: https://illuminerf.github.io
-  arxiv: 2406.06527
+  title: "Sokoban game"
+  venue: ISAE-SUPAERO, 2023 (personal improvements in 2025)
+  description: "Sokoban game with solver and map system, later extended with a front-end UI, score database, and full deployment."
+  github: jesptri/Sokoban
+  project_page: "spec_sokoban_project_supaero.pdf"
   image: sokoban.jpg
 
 - id: Hack Days ENS
   title: "Hack Days ENS"
-  venue: SIGGRAPH Asia, 2023
-  description: "Preconditioning camera optimization during NeRF training significantly improves their ability to jointly recover the scene and camera parameters."
-  project_page: "https://camp-nerf.github.io"
-  github: jonbarron/camp_zipnerf
-  arxiv: 2308.10902
-  image: camp_before.jpg
-  authors:
-    - keunhong
-    - phenzler
-    - bmild
-    - barron
-    - rmbrualla
-  awards:
-    - "Journal Paper"
+  venue: ENS, June 2025
+  description: "Hack Days 2025 is a European hackathon organized by DINUM and École Normale Supérieure, bringing together 300 participants from over 15 countries to design digital solutions for the public good."
+  project_page: https://hackdays.numerique.gouv.fr/
+  event_website: https://hackdays.numerique.gouv.fr/
+  github: jesptri/Hack-days-ENS
+  image: ens_logo.jpg
+
+- id: SQL
+  title: "SQL project"
+  venue: University of Limerick, December 2024
+  description: "Database design and querying project completed as part of the Database Systems module during my Erasmus semester at UL."
+  github: jesptri/Database_Systems
+  project_page: 'spec_sql_project_UL.pdf'
+  report: 'report_sql_project_UL.pdf'
+  image: database.jpg

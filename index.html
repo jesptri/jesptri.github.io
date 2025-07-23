@@ -38,47 +38,36 @@ layout: null
 
 <body>
 
-  <section class="hero">
-    <div class="hero-body container is-max-desktop">
-      <div class="columns">
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <h1 class="title">
+        <b>👋Hello, I'm {{ site.name }}</b>
+      </h1>
+      <div class="content has-text-justified">
+        {{ site.description | markdownify }}
+        <div class="buttons">
 
-        <div class="column is-4">
-          <figure class="image portrait">
-            <img src="{{ '/images/pdp_website.jpg' | relative_url }}" />
-          </figure>
-        </div>
+              <a class="external-link button is-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span></span>
+              </a>
 
-        <div class="column">
-          <h1 class="title">
-            <b>Hello, I'm {{ site.name }}</b>
-          </h1>
-          <div class="content has-text-justified">
-            {{ site.description | markdownify }}
-            <div class="buttons">
               <a class="external-link button is-light" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
                 <span class="icon"><i class="fas fa-file"></i></span>
-                <span>CV</span>
+                <span></span>
               </a>
 
-              <a class="external-link button is-light"
-                href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-                <span class="icon"><i class="ai ai-google-scholar"></i></span>
-                <span>Scholar</span>
+              <a class="external-link button is-light" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span></span>
               </a>
 
-              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}">
+              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}" target="_blank">
                 <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Github</span>
+                <span></span>
               </a>
 
-              <!-- <a class="external-link button is-light" href="https://twitter.com/{{ site.twitter_username }}">
-                <span class="icon"><i class="fab fa-twitter"></i></span>
-                <span>Twitter</span>
-              </a> -->
             </div>
-
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -91,7 +80,7 @@ layout: null
   </div>
 
   <section class="section">
-    <div class="container is-max-desktop">
+    <div class="container is-max-widescreen">
 
       <h2 class="title is-3">Internships</h2>
       <div class="columns is-multiline">
@@ -137,7 +126,7 @@ layout: null
   </div>
 
   <section class="section">
-    <div class="container is-max-desktop">
+    <div class="container is-max-widescreen">
       <h2 class="title is-3">Projects</h2>
 
       {% for project in site.data.projects %}
@@ -151,13 +140,13 @@ layout: null
               Your browser does not support the video tag.
             </video>
             {% endif %}
-            <img alt="{{ project.title }}" src="./images/{{ project.image }}" />
+            <img alt="{{ project.title }}" src="./images/{{ project.image }}" target="_blank" rel="noopener">
           </div>
         </div>
 
         <div class="column">
           <div class="content">
-            <h3 class="project-title"><a href="{{ project.project_page }}">{{ project.title }}</a></h3>
+            <h3 class="project-title"><a href="{{ project.project_page }}" target="_blank" rel="noopener">{{ project.title }} </a></h3>
             <div class="project-authors">
               {% for author_id in project.authors %}
               {% assign author = site.data.authors[author_id] %}
@@ -181,22 +170,37 @@ layout: null
             <p class="project-description">{{ project.description }}</p>
             <!-- project Links. -->
             <div class="project-links buttons field has-addons">
-              <a class="external-link button is-small is-ghost" href="{{ project.project_page }}">
+              {% if project.project_page %}
+              <a class="external-link button is-small is-ghost" href="{{ project.project_page }}" target="_blank" rel="noopener">
                 <span class="icon"><i class="fas fa-globe-asia"></i></span>
-                <span>Project Page</span>
+                <span>Project Specifications</span>
               </a>
-              <a class="external-link button is-small is-ghost"
-                href="https://arxiv.org/pdf/{{ project.arxiv }}.pdf">
+              {% endif %}
+
+              {% if project.event_website %}
+              <a class="external-link button is-small is-ghost" href="{{ project.event_website }}" target="_blank" rel="noopener">
+                <span class="icon"><i class="fas fa-globe-asia"></i></span>
+                <span>Event Website</span>
+              </a>
+              {% endif %}
+
+              {% if project.report %}
+              <a class="external-link button is-small is-ghost" href="{{ project.report }}" target="_blank" rel="noopener">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>PDF</span>
+                <span>Report PDF</span>
               </a>
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ project.arxiv }}">
+              {% endif %}
+
+              {% if project.arxiv %}
+              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ project.arxiv }}" target="_blank" rel="noopener">
                 <span class="icon"><i class="ai ai-arxiv"></i></span>
                 <span>arXiv</span>
               </a>
+              {% endif %}
+
               {% if project.github %}
-              <a class="external-link button is-small is-ghost" href="https://github.com/{{ project.github }}">
-                <span class="icon"><i class="fa fab fa-github"></i></span>
+              <a class="external-link button is-small is-ghost" href="https://github.com/{{ project.github }}" target="_blank" rel="noopener">
+                <span class="icon"><i class="fab fa-github"></i></span>
                 <span>Code</span>
               </a>
               {% endif %}
@@ -213,14 +217,20 @@ layout: null
   <footer class="footer">
     <div class="container">
       <div class="content footer-links has-text-centered">
-        <a href="mailto:{{ site.email }}">
-          <i class="fas fa-envelope"></i>
+        <a class="external-link button is-light is-small" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
+          <span class="icon is-small"><i class="fas fa-envelope"></i></span>
         </a>
-        <a class="external-link" href="https://github.com/{{ site.github_username }}">
-          <i class="fab fa-github"></i>
+
+        <a class="external-link button is-light is-small" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
+          <span class="icon is-small"><i class="fas fa-file"></i></span>
         </a>
-        <a class="external-link" href="https://scholar.google.com/citations?user={{ site.google_scholar }}">
-          <i class="ai ai-google-scholar"></i>
+
+        <a class="external-link button is-light is-small" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
+          <span class="icon is-small"><i class="fab fa-linkedin"></i></span>
+        </a>
+
+        <a class="external-link button is-light is-small" href="https://github.com/{{ site.github_username }}" target="_blank">
+          <span class="icon is-small"><i class="fab fa-github"></i></span>
         </a>
       </div>
       <div class="columns is-centered has-text-centered">

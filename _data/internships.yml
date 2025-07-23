@@ -3,15 +3,11 @@
   organization: "Salomon"
   date: "February 2025 - July 2025"
   url: "/internships/salomon-internship-2025/"
-  image: "salomon_website_2.jpg"
+  image: "salomon_website.jpg"
 
 - id: cnsnmm_internship_2024
   title: "Software Engineer at CNSN"
   organization: "Centre National de Ski Nordique et de Moyenne Montagne"
   date: "February 2024 - July 2024"
   url: "/internships/cnsnmm-internship-2024/"
-  image: "ffs_4.jpg"
-  # tags:
-  #   - "Generative AI"
-  #   - "3D Reconstruction"
-  #   - "Computer Vision"
+  image: "FFS_logo.jpg"

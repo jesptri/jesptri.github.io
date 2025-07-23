@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: internship
 title: "Internship at Salomon (2025)"
 image: "/images/salomon-app.jpg"
 tags: ["Mobile", "Flutter", "Serverless", "UX", "CI/CD"]
@@ -7,27 +7,27 @@ tags: ["Mobile", "Flutter", "Serverless", "UX", "CI/CD"]
 
 ## 🏔️ About Salomon
 
-<a href="https://www.salomon.com" target="_blank"><strong>Salomon</strong></a> is a global leader in outdoor sports gear 🥾⛷️, known for its high-performance products in trail running, skiing, hiking, and more. Headquartered in Annecy 🇫🇷, in the heart of the French Alps 🏞️, the brand sits at the intersection of innovation, technology, and user-centered design 🎯.
+<a href="https://www.salomon.com" target="_blank"><strong>Salomon</strong></a> is a global leader in outdoor sports gear, known for its high-performance products in trail running, skiing, hiking, and more. Headquartered in Annecy, in the heart of the French Alps, the brand sits at the intersection of innovation, technology, and user-centered design.
 
 ---
 
 ## 📱 What I Worked On
 
-During this 6-month internship 👨‍💻, I was part of the **IT team**.
+During this 6-month internship, I was part of the **IT team**.
 
-- I took part in developing a beta mobile application for both iOS and Android 📲. Initially tested by a handful of users, the app was later released to Salomon’s internal testers to gather valuable feedback 🔄.
+- I took part in developing a beta mobile application for both iOS and Android. Initially tested by a handful of users, the app was later released to Salomon’s internal testers to gather valuable feedback.
 
-- I led the end-to-end development of key mobile features and was also responsible for managing the backend 🔧.
+- I led the end-to-end development of key mobile features and was also responsible for managing the backend.
 
-- I set up three separate environments (dev/staging/prod) for the front-end, allowing me to dive deep into critical concepts such as **Auth0 authentication**, **CI/CD with GitLab**, and more 🔐⚙️.
+- I set up three separate environments (dev/staging/prod) for the front-end, allowing me to dive deep into critical concepts such as **Auth0 authentication**, **CI/CD with GitLab**, and more.
 
-- I automated the Play Store deployment using **GitLab CI/CD pipelines** and **Fastlane** 🚀 — a key milestone for the project, and something I’m genuinely proud of achieving 🎉!
+- I automated the Play Store deployment using **GitLab CI/CD pipelines** and **Fastlane**.
 
 ---
 
 ## 👥 Collaboration & Teamwork
 
-This experience was markedly different from my previous internship at CNSNMM 🏔️.
+This experience was markedly different from my previous internship at CNSNMM.
 
 I had the chance to work with:
 
@@ -39,7 +39,7 @@ I had the chance to work with:
 
 - I took part in **daily Agile stand-ups** within the broader IT team, which helped me build a solid understanding of Agile methodology 📅.
 
-- Beyond my direct tasks, I proactively engaged with various IT professionals at Salomon, including **developers**, **DevOps**, **IT architects**, **data scientists**, **data engineers**, **analysts**, and **product owners** 🧑‍💼💬. These discussions gave me invaluable insights into both **Salomon’s tech landscape** and its overall business model.
+- Beyond my direct tasks, I proactively engaged with various IT professionals at Salomon, including **developers**, **DevOps**, **IT architects**, **data scientists**, **data engineers**, **analysts**, and **product owners**. These discussions gave me invaluable insights into both **Salomon’s tech landscape** and its overall business model.
 
 ---
 
@@ -54,6 +54,6 @@ I had the chance to work with:
 <figure style="text-align: center; max-width: 400px; margin: auto;">
   <img src="/images/salomon-app.jpg" alt="Salomon Beta App UI" style="width: 100%; border-radius: 8px;">
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
-    Early beta version of the mobile app I developed — built with Flutter and tested by 100+ internal users across Europe 🌍.
+    Early beta version of the mobile app I developed.
   </figcaption>
 </figure>

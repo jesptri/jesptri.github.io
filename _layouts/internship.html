@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{ page.title }}</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
+  <script src="{{ '/js/index.js' | relative_url }}"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content footer-links has-text-centered">
+
+        <a class="external-link button is-light is-small" href="mailto:julespinoux@gmail.com">
+          <span class="icon is-small"><i class="fas fa-envelope"></i></span>
+        </a>
+
+        <a class="external-link button is-light is-small" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
+          <span class="icon is-small"><i class="fas fa-file"></i></span>
+        </a>
+
+        <a class="external-link button is-light is-small" href="https://www.linkedin.com/in/jules-espinoux/">
+          <span class="icon is-small"><i class="fab fa-linkedin"></i></span>
+        </a>
+
+        <a class="external-link button is-light is-small" href="https://github.com/{{ site.github_username }}">
+          <span class="icon is-small"><i class="fab fa-github"></i></span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

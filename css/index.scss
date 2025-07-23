@@ -6,6 +6,33 @@
     font-weight: 700;
 }
 
+.internship-media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2em 0;
+
+  figure {
+    flex: 1;
+    min-width: 300px;
+    margin: 0;
+
+    img, video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    figcaption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 0.5em;
+      text-align: center;
+    }
+  }
+}
+
 .portrait {
     overflow: hidden;
 }
@@ -13,6 +40,17 @@
 .footer .footer-links a {
     font-size: 25px;
     color: #000;
+}
+
+.footer .button.is-small {
+  padding: 0.2rem;
+  height: 2rem;
+  width: 4rem;
+}
+
+.footer .button.is-small .icon {
+  margin: 0;
+  font-size: 2rem;
 }
 
 .project-block {
