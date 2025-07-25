@@ -45,29 +45,23 @@ layout: null
       </h1>
       <div class="content has-text-justified">
         {{ site.description | markdownify }}
-        <div class="buttons">
+        <div class="buttons is-flex is-justify-content-start is-align-items-center">
+          <a class="button is-white has-text-grey-dark border-button" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+          </a>
 
-              <a class="external-link button is-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
-                <span></span>
-              </a>
+          <a class="button is-white has-text-grey-dark border-button" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
+            <span class="icon"><i class="fas fa-file"></i></span>
+          </a>
 
-              <a class="external-link button is-light" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
-                <span class="icon"><i class="fas fa-file"></i></span>
-                <span></span>
-              </a>
+          <a class="button is-white has-text-grey-dark border-button" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
+            <span class="icon"><i class="fab fa-linkedin"></i></span>
+          </a>
 
-              <a class="external-link button is-light" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
-                <span class="icon"><i class="fab fa-linkedin"></i></span>
-                <span></span>
-              </a>
-
-              <a class="external-link button is-light" href="https://github.com/{{ site.github_username }}" target="_blank">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span></span>
-              </a>
-
-            </div>
+          <a class="button is-white has-text-grey-dark border-button" href="https://github.com/{{ site.github_username }}" target="_blank">
+            <span class="icon"><i class="fab fa-github"></i></span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -81,51 +75,52 @@ layout: null
 
   <section class="section">
     <div class="container is-max-widescreen">
-
       <h2 class="title is-3">Internships</h2>
       <div class="columns is-multiline">
         {% for internship in site.data.internships %}
         <div class="column is-4">
-          <div class="card internship-card">
-            <div class="card-image">
-              <figure class="image">
-                {% if internship.video %}
-                <video autoplay loop muted playsinline class="internship-media">
-                  <source src="./images/{{ internship.video }}" type="video/mp4">
-                  <img src="./images/{{ internship.image }}" alt="{{ internship.title }}">
-                </video>
-                {% else %}
+          <div class="internship-block p-4 mb-5" style="border: 1px solid #dbdbdb; border-radius: 6px;">
+
+            <!-- Image or video inside the bordered block -->
+            <figure class="image mb-3">
+              {% if internship.video %}
+              <video autoplay loop muted playsinline class="internship-media" style="width: 100%; border-radius: 4px;">
+                <source src="./images/{{ internship.video }}" type="video/mp4">
                 <img src="./images/{{ internship.image }}" alt="{{ internship.title }}">
-                {% endif %}
-              </figure>
+              </video>
+              {% else %}
+              <img src="./images/{{ internship.image }}" alt="{{ internship.title }}" style="width: 100%; border-radius: 4px;">
+              {% endif %}
+            </figure>
+
+            <!-- Title -->
+            <p class="title is-5 internship-title mb-2">
+              <a href="{{ internship.url }}" target="_blank" rel="noopener" class="has-text-link">
+                {{ internship.title }}
+              </a>
+            </p>
+
+            <!-- Location and Date -->
+            <div class="is-flex is-align-items-center is-flex-wrap-wrap is-size-6 has-text-grey mb-3">
+              <span class="icon-text mr-4 mb-1 has-text-black">
+                <span class="icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+                <span>{{ internship.location }}</span>
+              </span>
+              <span class="icon-text mb-1 has-text-black">
+                <span class="icon">
+                  <i class="fas fa-calendar"></i>
+                </span>
+                <span>{{ internship.date }}</span>
+              </span>
             </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-5 internship-title">
-                    <a href="{{ internship.url }}" target="_blank" rel="noopener">{{ internship.title }}</a>
-                  </p>
-                    <p class="subtitle is-6">
-                      <span class="icon-text">
-                        <span class="icon">
-                          <i class="fas fa-map-marker-alt"></i>
-                        </span>
-                        <span>{{ internship.location }}</span>
-                      </span>
-                      &nbsp;&nbsp;
-                      <span class="icon-text">
-                        <span class="icon">
-                          <i class="fas fa-calendar"></i>
-                        </span>
-                        <span>{{ internship.date }}</span>
-                      </span>
-                    </p>
-                </div>
-              </div>
-              <div class="content internship-description">
-                {{ internship.description }}
-              </div>
+
+            <!-- Description -->
+            <div class="content internship-description has-text-black">
+              {{ internship.description }}
             </div>
+
           </div>
         </div>
         {% endfor %}
@@ -145,84 +140,60 @@ layout: null
       <h2 class="title is-3">Projects</h2>
 
       {% for project in site.data.projects %}
-      <div class="project-block columns">
+      <div class="project-block mb-5 p-5 has-background-white" style="border: 1px solid #dbdbdb; border-radius: 6px;">
+        <h3 class="title is-4 mb-2">
+          <a href="{{ project.project_page }}" target="_blank" rel="noopener" class="has-text-link">
+            {{ project.title }}
+          </a>
+        </h3>
 
-        <div class="column is-2">
-          <div class="project-image {% if project.image_mouseover %}project-mousecell{% endif %}">
-            {% if project.image_mouseover contains "mp4" %}
-            <video autoplay preload playsinline class="" height="100%" loop muted width="100%">
-              <source src="./images/{{ project.image_mouseover }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            {% endif %}
-            <img alt="{{ project.title }}" src="./images/{{ project.image }}" target="_blank" rel="noopener">
-          </div>
+        <div class="project-meta is-size-6 mb-3">
+          <span class="has-text-grey-dark"><strong>{{ project.venue }}</strong></span>
+          {% for award in project.awards %}
+          <span class="tag is-warning is-light ml-2">{{ award }}</span>
+          {% endfor %}
         </div>
 
-        <div class="column">
-          <div class="content">
-            <h3 class="project-title"><a href="{{ project.project_page }}" target="_blank" rel="noopener">{{ project.title }} </a></h3>
-            <div class="project-authors">
-              {% for author_id in project.authors %}
-              {% assign author = site.data.authors[author_id] %}
-              <span class="author-block {% if author.is_me %}author-me{% endif %}">
-                {% if author.is_me %}
-                {{ author.first_name }} {{author.middle_name}} {{ author.last_name }}{% if forloop.last == false %},{%
-                endif %}
-                {% else %}
-                <a href="{{ author.website }}">{{ author.first_name }} {{ author.middle_name }} {{ author.last_name
-                  }}</a>{% if forloop.last == false %},{% endif %}
-                {% endif %}
-              </span>
-              {% endfor %}
-            </div>
-            <div class="project-venue">
-              <span>{{ project.venue }}</span>
-              {% for award in project.awards %}
-              <span class="project-venue-emph">{{ award }}<span>
-                  {% endfor %}
-            </div>
-            <p class="project-description">{{ project.description }}</p>
-            <!-- project Links. -->
-            <div class="project-links buttons field has-addons">
-              {% if project.project_page %}
-              <a class="external-link button is-small is-ghost" href="{{ project.project_page }}" target="_blank" rel="noopener">
-                <span class="icon"><i class="fas fa-globe-asia"></i></span>
-                <span>Project Specifications</span>
-              </a>
-              {% endif %}
+        <p class="project-description mb-3">{{ project.description }}</p>
 
-              {% if project.event_website %}
-              <a class="external-link button is-small is-ghost" href="{{ project.event_website }}" target="_blank" rel="noopener">
-                <span class="icon"><i class="fas fa-globe-asia"></i></span>
-                <span>Event Website</span>
-              </a>
-              {% endif %}
+        <!-- Project Links -->
+        <div class="buttons are-small">
+          {% if project.project_page %}
+          <a class="button is-light" href="{{ project.project_page }}" target="_blank">
+            <span class="icon"><i class="fas fa-globe"></i></span>
+            <span>Specs</span>
+          </a>
+          {% endif %}
 
-              {% if project.report %}
-              <a class="external-link button is-small is-ghost" href="{{ project.report }}" target="_blank" rel="noopener">
-                <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>Report PDF</span>
-              </a>
-              {% endif %}
+          {% if project.event_website %}
+          <a class="button is-light" href="{{ project.event_website }}" target="_blank">
+            <span class="icon"><i class="fas fa-link"></i></span>
+            <span>Event</span>
+          </a>
+          {% endif %}
 
-              {% if project.arxiv %}
-              <a class="external-link button is-small is-ghost" href="https://arxiv.org/abs/{{ project.arxiv }}" target="_blank" rel="noopener">
-                <span class="icon"><i class="ai ai-arxiv"></i></span>
-                <span>arXiv</span>
-              </a>
-              {% endif %}
+          {% if project.report %}
+          <a class="button is-light" href="{{ project.report }}" target="_blank">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>Report</span>
+          </a>
+          {% endif %}
 
-              {% if project.github %}
-              <a class="external-link button is-small is-ghost" href="https://github.com/{{ project.github }}" target="_blank" rel="noopener">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>Code</span>
-              </a>
-              {% endif %}
-            </div>
-            <!--/ project Links. -->
-          </div>
+          {% if project.arxiv %}
+          <a class="button is-light" href="https://arxiv.org/abs/{{ project.arxiv }}" target="_blank">
+            <span class="icon"><i class="ai ai-arxiv"></i></span>
+            <span>arXiv</span>
+          </a>
+          {% endif %}
+
+          {% if project.github %}
+          <a class="button is-light" href="https://github.com/{{ project.github }}" target="_blank">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Code</span>
+          </a>
+          {% endif %}
         </div>
+        <!-- /Project Links -->
       </div>
       {% endfor %}
     </div>
