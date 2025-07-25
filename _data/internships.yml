@@ -2,12 +2,14 @@
   title: "Software Engineer at Salomon"
   organization: "Salomon"
   date: "February 2025 - July 2025"
+  location: "Annecy, France"
   url: "/internships/salomon-internship-2025/"
   image: "salomon_website.jpg"
 
 - id: cnsnmm_internship_2024
-  title: "Software Engineer at CNSN"
+  title: "Software Engineer at CNSNMM"
   organization: "Centre National de Ski Nordique et de Moyenne Montagne"
   date: "February 2024 - July 2024"
+  location: "Prémanon, France"
   url: "/internships/cnsnmm-internship-2024/"
   image: "FFS_logo.jpg"

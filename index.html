@@ -105,6 +105,21 @@ layout: null
                   <p class="title is-5 internship-title">
                     <a href="{{ internship.url }}" target="_blank" rel="noopener">{{ internship.title }}</a>
                   </p>
+                    <p class="subtitle is-6">
+                      <span class="icon-text">
+                        <span class="icon">
+                          <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <span>{{ internship.location }}</span>
+                      </span>
+                      &nbsp;&nbsp;
+                      <span class="icon-text">
+                        <span class="icon">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                        <span>{{ internship.date }}</span>
+                      </span>
+                    </p>
                 </div>
               </div>
               <div class="content internship-description">
