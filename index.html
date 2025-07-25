@@ -128,76 +128,90 @@ layout: null
     </div>
   </section>
 
-  <!-- Divider between Internships and Projects -->
-  <div class="hr">
-    <div class="container">
-      <hr>
-    </div>
+<!-- Divider between Internships and Projects -->
+<div class="hr">
+  <div class="container">
+    <hr>
   </div>
+</div>
 
-  <section class="section">
-    <div class="container is-max-widescreen">
-      <h2 class="title is-3">Projects</h2>
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3">Projects</h2>
 
-      {% for project in site.data.projects %}
-      <div class="project-block mb-5 p-5 has-background-white" style="border: 1px solid #dbdbdb; border-radius: 6px;">
-        <h3 class="title is-4 mb-2">
-          <a href="{{ project.project_page }}" target="_blank" rel="noopener" class="has-text-link">
-            {{ project.title }}
-          </a>
-        </h3>
+    {% for project in site.data.projects %}
+    <div class="project-block mb-5 p-5 has-background-white" style="border: 1px solid #dbdbdb; border-radius: 6px;">
 
-        <div class="project-meta is-size-6 mb-3">
-          <span class="has-text-grey-dark"><strong>{{ project.venue }}</strong></span>
-          {% for award in project.awards %}
-          <span class="tag is-warning is-light ml-2">{{ award }}</span>
-          {% endfor %}
-        </div>
-
-        <p class="project-description mb-3">{{ project.description }}</p>
-
-        <!-- Project Links -->
-        <div class="buttons are-small">
-          {% if project.project_page %}
-          <a class="button is-light" href="{{ project.project_page }}" target="_blank">
-            <span class="icon"><i class="fas fa-globe"></i></span>
-            <span>Specs</span>
-          </a>
-          {% endif %}
-
-          {% if project.event_website %}
-          <a class="button is-light" href="{{ project.event_website }}" target="_blank">
-            <span class="icon"><i class="fas fa-link"></i></span>
-            <span>Event</span>
-          </a>
-          {% endif %}
-
-          {% if project.report %}
-          <a class="button is-light" href="{{ project.report }}" target="_blank">
-            <span class="icon"><i class="fas fa-file-pdf"></i></span>
-            <span>Report</span>
-          </a>
-          {% endif %}
-
-          {% if project.arxiv %}
-          <a class="button is-light" href="https://arxiv.org/abs/{{ project.arxiv }}" target="_blank">
-            <span class="icon"><i class="ai ai-arxiv"></i></span>
-            <span>arXiv</span>
-          </a>
-          {% endif %}
-
-          {% if project.github %}
-          <a class="button is-light" href="https://github.com/{{ project.github }}" target="_blank">
-            <span class="icon"><i class="fab fa-github"></i></span>
-            <span>Code</span>
-          </a>
+      <!-- Title + Venue + Date in same top row -->
+      <div class="is-flex is-justify-content-space-between is-align-items-flex-start mb-2">
+        <div>
+          <h3 class="title is-4 mb-1">
+            <a href="{{ project.project_page }}" target="_blank" rel="noopener" class="has-text-link">
+              {{ project.title }}
+            </a>
+          </h3>
+          {% if project.date %}
+          <p class="is-size-6 has-text-grey">{{ project.date }}</p>
           {% endif %}
         </div>
-        <!-- /Project Links -->
+        <div class="has-text-grey is-size-6 has-text-right ml-4 mt-1" style="white-space: nowrap;">
+          <strong>{{ project.venue }}</strong>
+        </div>
       </div>
-      {% endfor %}
+
+      <!-- Description -->
+      <p class="project-description mb-3">{{ project.description }}</p>
+
+      <!-- Awards -->
+      {% if project.awards %}
+      <div class="mb-3">
+        {% for award in project.awards %}
+        <span class="tag is-warning is-light">{{ award }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- Project Links -->
+      <div class="buttons are-small">
+        {% if project.project_page %}
+        <a class="button is-light" href="{{ project.project_page }}" target="_blank">
+          <span class="icon"><i class="fas fa-globe"></i></span>
+          <span>Specs</span>
+        </a>
+        {% endif %}
+
+        {% if project.event_website %}
+        <a class="button is-light" href="{{ project.event_website }}" target="_blank">
+          <span class="icon"><i class="fas fa-link"></i></span>
+          <span>Event</span>
+        </a>
+        {% endif %}
+
+        {% if project.report %}
+        <a class="button is-light" href="{{ project.report }}" target="_blank">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span>
+          <span>Report</span>
+        </a>
+        {% endif %}
+
+        {% if project.arxiv %}
+        <a class="button is-light" href="https://arxiv.org/abs/{{ project.arxiv }}" target="_blank">
+          <span class="icon"><i class="ai ai-arxiv"></i></span>
+          <span>arXiv</span>
+        </a>
+        {% endif %}
+
+        {% if project.github %}
+        <a class="button is-light" href="https://github.com/{{ project.github }}" target="_blank">
+          <span class="icon"><i class="fab fa-github"></i></span>
+          <span>Code</span>
+        </a>
+        {% endif %}
+      </div>
     </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>
 
 
   <footer class="footer">

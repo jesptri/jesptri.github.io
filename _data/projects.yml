@@ -1,6 +1,6 @@
 - id: sokoban
   title: "Sokoban game"
-  venue: ISAE-SUPAERO, 2023 (personal improvements in 2025)
+  # venue: ISAE-SUPAERO, 2023 (personal improvements in 2025)
   description: "Sokoban game with solver and map system, later extended with a front-end UI, score database, and full deployment."
   github: jesptri/Sokoban
   project_page: "spec_sokoban_project_supaero.pdf"
@@ -8,7 +8,7 @@
 
 - id: Hack Days ENS
   title: "Hack Days ENS"
-  venue: ENS, June 2025
+  # venue: ENS, June 2025
   description: "Hack Days 2025 is a European hackathon organized by DINUM and École Normale Supérieure, bringing together 300 participants from over 15 countries to design digital solutions for the public good."
   project_page: https://hackdays.numerique.gouv.fr/
   event_website: https://hackdays.numerique.gouv.fr/
@@ -17,7 +17,7 @@
 
 - id: SQL
   title: "SQL project"
-  venue: University of Limerick, December 2024
+  # venue: University of Limerick, December 2024
   description: "Database design and querying project completed as part of the Database Systems module during my Erasmus semester at UL."
   github: jesptri/Database_Systems
   project_page: 'spec_sql_project_UL.pdf'
