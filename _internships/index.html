@@ -1,0 +1,11 @@
+---
+layout: default
+title: Internships
+---
+
+<h1>Internships</h1>
+<ul>
+  {% for internship in site.internships %}
+    <li><a href="{{ internship.url }}">{{ internship.title }}</a></li>
+  {% endfor %}
+</ul>
