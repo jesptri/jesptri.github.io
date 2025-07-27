@@ -37,7 +37,7 @@ collections:
 
 
 #   My current research interests are primarily in 3D generative AI and diffusion models.
-# baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://url.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: username
 github_username: jesptri
