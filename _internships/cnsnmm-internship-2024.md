@@ -2,6 +2,7 @@
 layout: internship
 title: "Internship at CNSNMM (2024)"
 tags: ["Computer Vision", "3D Reconstruction", "AI"]
+permalink: /internships/cnsnmm-internship-2024/
 ---
 
 ## 🏔️ About CNSNMM

@@ -3,6 +3,7 @@ layout: internship
 title: "Internship at Salomon (2025)"
 image: "/images/salomon-app.jpg"
 tags: ["Mobile", "Flutter", "Serverless", "UX", "CI/CD"]
+permalink: /internships/salomon-internship-2025/
 ---
 
 ## 🏔️ About Salomon
