@@ -33,8 +33,6 @@ description: |
 collections:
   internships:
     output: true
-    permalink: /internships/:name/
-
 
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://url.com" # the base hostname & protocol for your site, e.g. http://example.com
