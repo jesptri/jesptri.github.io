@@ -8,7 +8,7 @@ permalink: /internships/salomon-internship-2025/
 
 ## 🏔️ About Salomon
 
-<a href="https://www.salomon.com" target="_blank"><strong>Salomon</strong></a> is a global leader in outdoor sports gear, known for its high-performance products in trail running, skiing, hiking, and more. Headquartered in Annecy, in the heart of the French Alps, the brand sits at the intersection of innovation, technology, and user-centered design.
+<a href="https://www.salomon.com"><strong>Salomon</strong></a> is a global leader in outdoor sports gear, known for its high-performance products in trail running, skiing, hiking, and more. Headquartered in Annecy, in the heart of the French Alps, the brand sits at the intersection of innovation, technology, and user-centered design.
 
 ---
 
