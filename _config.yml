@@ -40,7 +40,7 @@ collections:
 github_username: jesptri
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 
