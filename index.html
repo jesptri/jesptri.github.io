@@ -41,27 +41,28 @@ layout: null
   <section class="section">
     <div class="container is-max-widescreen">
       <h1 class="title">
-        <b>👋Hello, I'm {{ site.name }}</b>
+        <b class="title is-2">👋Hello, I'm {{ site.name }}</b>
       </h1>
       <div class="content has-text-justified">
         {{ site.description | markdownify }}
         <div class="buttons is-flex is-justify-content-start is-align-items-center">
-          <a class="button is-white has-text-grey-dark border-button" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
-            <span class="icon"><i class="fas fa-envelope"></i></span>
+          <a class="button is-white has-text-black-dark border-button is-big" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
+            <span class="icon is-big"><i class="fas fa-envelope"></i></span>
           </a>
 
-          <a class="button is-white has-text-grey-dark border-button" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
-            <span class="icon"><i class="fas fa-file"></i></span>
+          <a class="button is-white has-text-black-dark border-button is-big" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
+            <span class="icon is-big"><i class="fas fa-file"></i></span>
           </a>
 
-          <a class="button is-white has-text-grey-dark border-button" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
-            <span class="icon"><i class="fab fa-linkedin"></i></span>
+          <a class="button is-white has-text-black-dark border-button is-big" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
+            <span class="icon is-big"><i class="fab fa-linkedin"></i></span>
           </a>
 
-          <a class="button is-white has-text-grey-dark border-button" href="https://github.com/{{ site.github_username }}" target="_blank">
-            <span class="icon"><i class="fab fa-github"></i></span>
+          <a class="button is-white has-text-black-dark border-button is-big" href="https://github.com/{{ site.github_username }}" target="_blank">
+            <span class="icon is-big"><i class="fab fa-github"></i></span>
           </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -73,9 +74,9 @@ layout: null
     </div>
   </div>
 
-  <section class="section">
+  <section class="section is-section">
     <div class="container is-max-widescreen">
-      <h2 class="title is-3">Internships</h2>
+      <h2 class="title is-2">Internships</h2>
       <div class="columns is-multiline">
         {% for internship in site.data.internships %}
         <div class="column is-4">
@@ -128,7 +129,29 @@ layout: null
     </div>
   </section>
 
-<!-- Divider between Internships and Projects -->
+<!-- Divider between Internships and Posts -->
+
+<div class="hr"><div class="container"><hr></div></div>
+
+<section class="section is-small">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-2">Blog</h2>
+    {% for post in site.posts limit:3 %}
+    <div class="box mb-4">
+      <h3 class="title is-5">
+        <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+      </h3>
+      <p class="is-size-6 has-text-grey">{{ post.date | date: "%B %d, %Y" }}</p>
+      <p>{{ post.excerpt }}</p>
+      <a class="button is-small is-link mt-2" href="{{ post.url }}" target="_blank">Read more</a>
+    </div>
+    {% endfor %}
+    <!-- <a class="button is-light is-small mt-3" href="/blog/" target="_blank">View all blog posts</a> -->
+  </div>
+</section>
+
+<!-- Divider between Posts and Projects -->
+
 <div class="hr">
   <div class="container">
     <hr>
@@ -137,10 +160,10 @@ layout: null
 
 <section class="section">
   <div class="container is-max-widescreen">
-    <h2 class="title is-3">Projects</h2>
+    <h2 class="title is-2">Projects</h2>
 
     {% for project in site.data.projects %}
-    <div class="project-block mb-5 p-5 has-background-white" style="border: 1px solid #dbdbdb; border-radius: 6px;">
+    <div class="project-block mb-4 p-4 has-background-white" style="border: 1px solid #dbdbdb; border-radius: 6px;">
 
       <!-- Title + Venue + Date in same top row -->
       <div class="is-flex is-justify-content-space-between is-align-items-flex-start mb-2">
@@ -176,7 +199,7 @@ layout: null
         {% if project.project_page %}
         <a class="button is-light" href="{{ project.project_page }}" target="_blank">
           <span class="icon"><i class="fas fa-globe"></i></span>
-          <span>Specs</span>
+          <span>Instructions</span>
         </a>
         {% endif %}
 

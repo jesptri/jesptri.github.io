@@ -6,6 +6,20 @@
     font-weight: 700;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
+.button.is-big {
+  font-size: 1.5rem;     /* Taille du texte */
+  padding: 1rem 1.5rem;  /* Espacement interne */
+  height: auto;          /* Laisse le bouton s'étendre */
+}
+
+.button.is-big .icon {
+  font-size: 1.75rem;    /* Taille de l’icône */
+}
+
 .internship-media-grid {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<section class="section">
+  <div class="container content">
+    <h1 class="title">📝 Blog</h1>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+          <span class="has-text-grey">({{ post.date | date: "%Y-%m-%d" }})</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

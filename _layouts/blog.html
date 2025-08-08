@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-2">Blog</h1>
+
+    {% for post in site.posts %}
+      <div class="box mb-4">
+        <h2 class="title is-4">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <p class="is-size-6 has-text-grey">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p>{{ post.excerpt }}</p>
+        <a class="button is-link is-small mt-2" href="{{ post.url }}">Read more</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
