@@ -1,7 +1,7 @@
 - id: sokoban
   title: "Sokoban game"
   # venue: ISAE-SUPAERO, 2023 (personal improvements in 2025)
-  description: "Sokoban game with solver and map system, later extended with a front-end UI, score database, and full deployment."
+  description: "Sokoban game with solver and map system, later extended with a front-end UI and score database."
   github: jesptri/Sokoban
   project_page: "spec_sokoban_project_supaero.pdf"
   image: sokoban.jpg
@@ -18,7 +18,7 @@
 - id: SQL
   title: "SQL project"
   # venue: University of Limerick, December 2024
-  description: "Database design and querying project completed as part of the Database Systems module during my Erasmus semester at UL."
+  description: "Database design and querying project completed as part of the Database Systems module during my Erasmus semester at the University of Limerick."
   github: jesptri/Database_Systems
   project_page: 'spec_sql_project_UL.pdf'
   report: 'report_sql_project_UL.pdf'
