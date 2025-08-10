@@ -10,7 +10,7 @@
   title: "Hack Days ENS"
   # venue: ENS, June 2025
   description: "Hack Days 2025 is a European hackathon organized by DINUM and École Normale Supérieure, bringing together 300 participants from over 15 countries to design digital solutions for the public good."
-  project_page: https://hackdays.numerique.gouv.fr/
+  # project_page: https://hackdays.numerique.gouv.fr/
   event_website: https://hackdays.numerique.gouv.fr/
   github: jesptri/Hack-days-ENS
   image: ens_logo.jpg
