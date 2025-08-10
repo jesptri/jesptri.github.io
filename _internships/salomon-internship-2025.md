@@ -50,11 +50,11 @@ I had the chance to work with:
 
 ---
 
-## 📸 Media
+<!-- ## 📸 Media
 
 <figure style="text-align: center; max-width: 400px; margin: auto;">
   <img src="/images/salomon-app.jpg" alt="Salomon Beta App UI" style="width: 100%; border-radius: 8px;">
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
     Early beta version of the mobile app I developed.
   </figcaption>
-</figure>
+</figure> -->
