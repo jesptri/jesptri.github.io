@@ -57,7 +57,7 @@ Following the sessions, I co-led a **synthesis** phase with the UX designer to o
 
 ---
 
-## 🎨 4. What’s Next: Prototyping 
+## 🎨 4. What’s Next: Prototyping  
 
 Although I wasn’t involved in this phase directly (it's planned for after the end of my internship), we outlined a roadmap for:
 
