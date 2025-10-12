@@ -1,19 +1,67 @@
 ---
-layout: default
-title: Blog
-permalink: /blog/
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+<head>
+    <meta name="ROBOTS" content="INDEX,FOLLOW">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ site.name }} - Blog</title>
+    <meta name="description" content="{{ site.name }}'s blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="name">
+                <h1><a href="./">{{ site.name }}</a></h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./" class="nav-item">About</a></li>
+                    <li><a href="./blog.html" class="nav-item nav-item-active">Blog</a></li>
+                    <li><a href="./contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
 
-<section class="section">
-  <div class="container content">
-    <h1 class="title">📝 Blog</h1>
-    <ul>
-      {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
-          <span class="has-text-grey">({{ post.date | date: "%Y-%m-%d" }})</span>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+        {% for post in site.posts %}
+        <section class="inner">
+            <article class="post-entry"> 
+                <header class="entry-header">
+                    <h2>{{ post.title }}</h2>
+                </header> 
+                <section class="entry-content">
+                    <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+                </section>
+                <footer class="entry-footer">
+                    Date: {{ post.date | date: "%B %d, %Y" }} | Author: {{ site.name }}
+                </footer>
+                <a class="entry-link" href="{{ post.url }}"></a>
+            </article>
+        </section>
+        {% endfor %}
+
+    </main>
+    <footer class="container">
+        <p style="text-align: center; margin-top: 2rem; padding: 2rem 0; color: #666;">
+            © {{ site.name }} - {{ "now" | date: "%Y" }}
+        </p>
+    </footer>
+</body>
+</html>

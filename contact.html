@@ -1,0 +1,83 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+<head>
+    <meta name="ROBOTS" content="INDEX,FOLLOW">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ site.name }} - Contact</title>
+    <meta name="description" content="Get in touch with {{ site.name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="name">
+                <h1><a href="./">{{ site.name }}</a></h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./" class="nav-item">About</a></li>
+                    <li><a href="./blog.html" class="nav-item">Blog</a></li>
+                    <li><a href="./contact.html" class="nav-item nav-item-active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="contact-section">
+            <h1>📬 Get in Touch</h1>
+            <p class="contact-intro">
+                Feel free to reach out for collaborations, questions, or just to say hi!
+            </p>
+
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="far fa-envelope icon"></i>
+                    <span><strong>Personal Email:</strong> <a href="mailto:julespinoux@gmail.com">julespinoux@gmail.com</a></span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="far fa-envelope icon"></i>
+                    <span><strong>School Email:</strong> <a href="mailto:jules.espinoux@student.isae-supaero.fr">jules.espinoux@student.isae-supaero.fr</a></span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-linkedin icon"></i>
+                    <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">linkedin.com/in/jules-espinoux</a></span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github icon"></i>
+                    <span><strong>GitHub:</strong> <a href="https://github.com/{{ site.github_username }}" target="_blank">github.com/{{ site.github_username }}</a></span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-file icon"></i>
+                    <span><strong>Resume:</strong> <a href="/Jules_ESPINOUX_Resume.pdf" target="_blank">Download my CV</a></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <p style="text-align: center; margin-top: 2rem; padding: 2rem 0; color: #666;">
+            © {{ site.name }} - {{ "now" | date: "%Y" }}
+        </p>
+    </footer>
+</body>
+</html>
+

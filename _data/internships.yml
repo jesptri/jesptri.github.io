@@ -1,5 +1,6 @@
 - id: athenastudio_internship_2025
   title: "Software Engineer at Athena Studio"
+  position: "Software Engineer"
   organization: "Athena Studio"
   date: "August 2025"
   location: "Luxembourg City, Luxembourg"
@@ -8,6 +9,7 @@
 
 - id: salomon_internship_2025
   title: "Software Engineer at Salomon"
+  position: "Software Engineer"
   organization: "Salomon"
   date: "February 2025 - July 2025"
   location: "Annecy, France"
@@ -16,7 +18,8 @@
 
 - id: cnsnmm_internship_2024
   title: "Software Engineer at CNSNMM"
-  organization: "Centre National de Ski Nordique et de Moyenne Montagne"
+  position: "Software Engineer"
+  organization: "Fédération Française de Ski"
   date: "February 2024 - July 2024"
   location: "Prémanon, France"
   url: "/internships/cnsnmm-internship-2024/"

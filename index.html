@@ -2,32 +2,25 @@
 layout: null
 ---
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}');
+</script>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.name }}</title>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@700&family=Noto+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link href="{{ '/css/fontawesome.all.min.css' | relative_url }}" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
+  <meta name="description" content="{{ site.name }}'s homepage">
+  <!-- Font Awesome Icons -->
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Main CSS -->
   <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
   <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
 
@@ -37,235 +30,97 @@ layout: null
 </head>
 
 <body>
+  <header>
+    <div class="container">
+      <div class="name">
+        <h1><a href="./">{{ site.name }}</a></h1>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="./" class="nav-item nav-item-active">About</a></li>
+          <li><a href="./blog.html" class="nav-item">Blog</a></li>
+          <li><a href="./contact.html" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <section class="section">
-    <div class="container is-max-widescreen">
-      <h1 class="title">
-        <b class="title is-2">👋Hello, I'm {{ site.name }}</b>
-      </h1>
-      <div class="content has-text-justified">
+  <main class="container">
+    <section class="about">
+      <h1>👋 Welcome</h1>
+      <div class="content">
         {{ site.description | markdownify }}
-        <div class="buttons is-flex is-justify-content-start is-align-items-center">
-          <a class="button is-white has-text-black-dark border-button is-big" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
-            <span class="icon is-big"><i class="fas fa-envelope"></i></span>
-          </a>
-
-          <a class="button is-white has-text-black-dark border-button is-big" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
-            <span class="icon is-big"><i class="fas fa-file"></i></span>
-          </a>
-
-          <a class="button is-white has-text-black-dark border-button is-big" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
-            <span class="icon is-big"><i class="fab fa-linkedin"></i></span>
-          </a>
-
-          <a class="button is-white has-text-black-dark border-button is-big" href="https://github.com/{{ site.github_username }}" target="_blank">
-            <span class="icon is-big"><i class="fab fa-github"></i></span>
-          </a>
-        </div>
-
       </div>
-    </div>
-  </section>
+      <p class="social-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
+          <i class="far fa-envelope icon" title="Email"></i>
+        </a>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank">
+          <i class="fab fa-github icon" title="GitHub"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
+          <i class="fab fa-linkedin icon" title="LinkedIn"></i>
+        </a>
+        <a href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
+          <i class="fas fa-file icon" title="CV"></i>
+        </a>
+      </p>
+    </section>
 
-  <!-- News. -->
-  <div class="hr">
-    <div class="container">
-      <hr>
-    </div>
-  </div>
-
-  <section class="section is-section">
-    <div class="container is-max-widescreen">
-      <h2 class="title is-2">Internships</h2>
-      <div class="columns is-multiline">
+    <section id="internships" class="internships-section">
+      <h2>Internships</h2>
+      
+      <div class="internships-grid">
         {% for internship in site.data.internships %}
-        <div class="column is-4">
-          <div class="internship-block p-4 mb-5" style="border: 1px solid #dbdbdb; border-radius: 6px;">
-
-            <!-- Image or video inside the bordered block -->
-            <figure class="image mb-3">
-              {% if internship.video %}
-              <video autoplay loop muted playsinline class="internship-media" style="width: 100%; border-radius: 4px;">
-                <source src="./images/{{ internship.video }}" type="video/mp4">
-                <img src="./images/{{ internship.image }}" alt="{{ internship.title }}">
-              </video>
-              {% else %}
-              <img src="./images/{{ internship.image }}" alt="{{ internship.title }}" style="width: 100%; border-radius: 4px;">
-              {% endif %}
-            </figure>
-
-            <!-- Title -->
-            <p class="title is-5 internship-title mb-2">
-              <a href="{{ internship.url }}" target="_blank" rel="noopener" class="has-text-link">
-                {{ internship.title }}
-              </a>
-            </p>
-
-            <!-- Location and Date -->
-            <div class="is-flex is-align-items-center is-flex-wrap-wrap is-size-6 has-text-grey mb-3">
-              <span class="icon-text mr-4 mb-1 has-text-black">
-                <span class="icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </span>
-                <span>{{ internship.location }}</span>
-              </span>
-              <span class="icon-text mb-1 has-text-black">
-                <span class="icon">
-                  <i class="fas fa-calendar"></i>
-                </span>
-                <span>{{ internship.date }}</span>
-              </span>
-            </div>
-
-            <!-- Description -->
-            <div class="content internship-description has-text-black">
-              {{ internship.description }}
-            </div>
-
+        <article class="internship-card">
+          <div class="internship-image">
+            <img src="/images/{{ internship.image }}" alt="{{ internship.organization }} logo">
           </div>
-        </div>
+          <div class="internship-content">
+            <header class="entry-header">
+              <h3 class="position-title">{{ internship.position }}</h3>
+              <h2 class="company-name">{{ internship.organization }}</h2>
+            </header>
+            <section class="entry-content">
+              <p class="location-info"><i class="fas fa-map-marker-alt"></i> {{ internship.location }}</p>
+              <p class="date-info"><i class="far fa-calendar"></i> {{ internship.date }}</p>
+            </section>
+          </div>
+          <a class="entry-link" href="{{ internship.url }}"></a>
+        </article>
         {% endfor %}
       </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <article class="project-card">
+        <header class="entry-header">
+          <h2>{{ project.title }}</h2>
+        </header>
+        <section class="entry-content">
+          <p>{{ project.description }}</p>
+        </section>
+        <footer class="entry-footer">
+          {% if project.venue %}<strong>{{ project.venue }}</strong><br>{% endif %}
+          {% if project.github %}<a href="https://github.com/{{ project.github }}" target="_blank">GitHub</a>{% endif %}
+          {% if project.project_page %} • <a href="{{ project.project_page }}" target="_blank">Docs</a>{% endif %}
+          {% if project.report %} • <a href="{{ project.report }}" target="_blank">Report</a>{% endif %}
+        </footer>
+        <a class="entry-link" href="{% if project.github %}https://github.com/{{ project.github }}{% elsif project.project_page %}{{ project.project_page }}{% elsif project.event_website %}{{ project.event_website }}{% endif %}"></a>
+      </article>
+      {% endfor %}
     </div>
-  </section>
+    </section>
+  </main>
 
-<!-- Divider between Internships and Posts -->
-
-<div class="hr"><div class="container"><hr></div></div>
-
-<section class="section is-small">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-2">Blog</h2>
-    {% for post in site.posts limit:3 %}
-    <div class="box mb-4">
-      <h3 class="title is-5">
-        <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
-      </h3>
-      <p class="is-size-6 has-text-grey">{{ post.date | date: "%B %d, %Y" }}</p>
-      <p>{{ post.excerpt }}</p>
-      <a class="button is-small is-link mt-2" href="{{ post.url }}" target="_blank">Read more</a>
-    </div>
-    {% endfor %}
-    <!-- <a class="button is-light is-small mt-3" href="/blog/" target="_blank">View all blog posts</a> -->
-  </div>
-</section>
-
-<!-- Divider between Posts and Projects -->
-
-<div class="hr">
-  <div class="container">
-    <hr>
-  </div>
-</div>
-
-<section class="section">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-2">Projects</h2>
-
-    {% for project in site.data.projects %}
-    <div class="project-block mb-4 p-4 has-background-white" style="border: 1px solid #dbdbdb; border-radius: 6px;">
-
-      <!-- Title + Venue + Date in same top row -->
-      <div class="is-flex is-justify-content-space-between is-align-items-flex-start mb-2">
-        <div>
-          <h3 class="title is-4 mb-1">
-            <a href="{{ project.project_page }}" target="_blank" rel="noopener" class="has-text-link">
-              {{ project.title }}
-            </a>
-          </h3>
-          {% if project.date %}
-          <p class="is-size-6 has-text-grey">{{ project.date }}</p>
-          {% endif %}
-        </div>
-        <div class="has-text-grey is-size-6 has-text-right ml-4 mt-1" style="white-space: nowrap;">
-          <strong>{{ project.venue }}</strong>
-        </div>
-      </div>
-
-      <!-- Description -->
-      <p class="project-description mb-3">{{ project.description }}</p>
-
-      <!-- Awards -->
-      {% if project.awards %}
-      <div class="mb-3">
-        {% for award in project.awards %}
-        <span class="tag is-warning is-light">{{ award }}</span>
-        {% endfor %}
-      </div>
-      {% endif %}
-
-      <!-- Project Links -->
-      <div class="buttons are-small">
-        {% if project.project_page %}
-        <a class="button is-light" href="{{ project.project_page }}" target="_blank">
-          <span class="icon"><i class="fas fa-globe"></i></span>
-          <span>Instructions</span>
-        </a>
-        {% endif %}
-
-        {% if project.event_website %}
-        <a class="button is-light" href="{{ project.event_website }}" target="_blank">
-          <span class="icon"><i class="fas fa-link"></i></span>
-          <span>Event</span>
-        </a>
-        {% endif %}
-
-        {% if project.report %}
-        <a class="button is-light" href="{{ project.report }}" target="_blank">
-          <span class="icon"><i class="fas fa-file-pdf"></i></span>
-          <span>Report</span>
-        </a>
-        {% endif %}
-
-        {% if project.arxiv %}
-        <a class="button is-light" href="https://arxiv.org/abs/{{ project.arxiv }}" target="_blank">
-          <span class="icon"><i class="ai ai-arxiv"></i></span>
-          <span>arXiv</span>
-        </a>
-        {% endif %}
-
-        {% if project.github %}
-        <a class="button is-light" href="https://github.com/{{ project.github }}" target="_blank">
-          <span class="icon"><i class="fab fa-github"></i></span>
-          <span>Code</span>
-        </a>
-        {% endif %}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content footer-links has-text-centered">
-        <a class="external-link button is-light is-small" href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
-          <span class="icon is-small"><i class="fas fa-envelope"></i></span>
-        </a>
-
-        <a class="external-link button is-light is-small" href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
-          <span class="icon is-small"><i class="fas fa-file"></i></span>
-        </a>
-
-        <a class="external-link button is-light is-small" href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
-          <span class="icon is-small"><i class="fab fa-linkedin"></i></span>
-        </a>
-
-        <a class="external-link button is-light is-small" href="https://github.com/{{ site.github_username }}" target="_blank">
-          <span class="icon is-small"><i class="fab fa-github"></i></span>
-        </a>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              Feel free to <a href="https://github.com/keunhong/keunhong.github.io">borrow this template</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <footer class="container">
+    <p style="text-align: center; margin-top: 2rem; padding: 2rem 0; color: #666;">
+      © {{ site.name }} - {{ "now" | date: "%Y" }}
+    </p>
   </footer>
 
 </body>

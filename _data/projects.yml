@@ -1,24 +1,29 @@
+- id: turbokmeans
+  title: "🚀 TurboKMeans"
+  description: "Parallelization of an image compression algorithm using OpenMP for high performance computing."
+  github: jesptri/HPC-OpenMP
+
 - id: sokoban
-  title: "Sokoban game"
+  title: "🧩 Sokoban game"
   # venue: ISAE-SUPAERO, 2023 (personal improvements in 2025)
-  description: "Sokoban game with solver and map system, later extended with a front-end UI and score database."
+  description: "Sokoban game with two automatic solver versions."
   github: jesptri/Sokoban
   project_page: "spec_sokoban_project_supaero.pdf"
   image: sokoban.jpg
 
 - id: Hack Days ENS
-  title: "Hack Days ENS"
+  title: "🏆 Hack Days ENS"
   # venue: ENS, June 2025
-  description: "Hack Days 2025 is a European hackathon organized by DINUM and École Normale Supérieure, bringing together 300 participants from over 15 countries to design digital solutions for the public good."
+  description: "European hackathon with 300+ participants from 15 countries designing digital solutions for public good."
   # project_page: https://hackdays.numerique.gouv.fr/
   event_website: https://hackdays.numerique.gouv.fr/
   github: jesptri/Hack-days-ENS
   image: ens_logo.jpg
 
 - id: SQL
-  title: "SQL project"
+  title: "🗄️ SQL project"
   # venue: University of Limerick, December 2024
-  description: "Database design and querying project completed as part of the Database Systems module during my Erasmus semester at the University of Limerick."
+  description: "Database design and querying project completed during Erasmus at University of Limerick."
   github: jesptri/Database_Systems
   project_page: 'spec_sql_project_UL.pdf'
   report: 'report_sql_project_UL.pdf'
