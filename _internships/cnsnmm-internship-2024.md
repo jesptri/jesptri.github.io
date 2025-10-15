@@ -6,7 +6,7 @@ permalink: /internships/cnsnmm-internship-2024/
 
 ## 🏔️ About CNSNMM
 
-The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre National de Ski Nordique et de Moyenne Montagne**</a> (CNSNMM) is France’s national hub for Nordic skiing and mountain sports. Located in the Jura Mountains, the center focuses on high-performance athlete development and is home to the **French national teams** in **biathlon**, **cross-country skiing**, **ski jumping**, and **Nordic combined**. The CNSNMM plays a key role in preparing athletes for international competition 🌍.
+The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre National de Ski Nordique et de Moyenne Montagne**</a> (CNSNMM) is France’s national hub for Nordic skiing and mountain sports. Located in the Jura Mountains, the center focuses on high-performance athlete development and is home to the **French national teams** in **biathlon**, **cross-country skiing**, **ski jumping**, and **nordic combined**. The CNSNMM plays a key role in preparing athletes for international competition 🌍.
 
 ---
 
@@ -24,7 +24,7 @@ The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre Nationa
 
 This was my **first professional experience**, and I was the only technical person on site. Without direct engineering support, I had to quickly become self-reliant and resourceful.
 
-I’m especially grateful to some friends from <a href="https://www.isae-supaero.fr/" target="_blank">**ISAE-SUPAERO**</a> 🎓, whose expertise I could regularly draw on, as well as to a few teachers who provided valuable feedback throughout the project. These interactions, combined with the hands-on nature of the work, significantly accelerated my learning curve.
+I am especially grateful to some friends from <a href="https://www.isae-supaero.fr/" target="_blank">**ISAE-SUPAERO**</a> 🎓, whose expertise I could regularly draw on, as well as to a few teachers who provided valuable feedback throughout the project. These interactions, combined with the hands-on nature of the work, significantly accelerated my learning curve.
 
 ---
 
@@ -37,7 +37,7 @@ I’m especially grateful to some friends from <a href="https://www.isae-supaero
 ## 🎿 Fun Facts
 
 - I had the chance to go cycling with the French women national team during a training camp at the CNSNMM (definitely one of the best group rides of my life!).  
-- Simon FOURCADE, former biathlon champion (Martin FOURCADE, his brother is a former biathlon world champion) and national coach, called me while I was on a flight back from my Erasmus semester in Ireland.
+- Simon FOURCADE, former biathlon champion (Martin FOURCADE, his brother is a former biathlon world champion) and national coach, called me while I was on a flight back from my Erasmus semester in Ireland (to fix missing data on the dashboard).
 
 ---
 
@@ -65,6 +65,6 @@ I’m especially grateful to some friends from <a href="https://www.isae-supaero
   </video>
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
     <strong>Demo video</strong> — The scraper I developed to get time data of biathlon races.  
-    Code available on <a href="https://github.com/jesptri/ScraperIBU" target="_blank">GitHub</a>.
+    The code of the first scraper version is available on <a href="https://github.com/jesptri/ScraperIBU" target="_blank">GitHub</a>.
   </figcaption>
 </figure>
