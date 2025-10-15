@@ -8,6 +8,64 @@
     box-sizing: border-box;
 }
 
+// Reset entry-header elements to remove any default styling
+.entry-header {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+// Additional reset for header elements
+header.entry-header {
+    all: unset !important;
+    display: block !important;
+}
+
+// Specific reset for blog entries
+.post-entry .entry-header {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    
+    h2 {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+// Reset for Bulma classes that might interfere
+.title, .subtitle {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+// Ensure blog post titles don't have containers
+.post-entry .entry-header h2,
+.blog .entry-header h2 {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -22,7 +80,9 @@ header {
     padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    isolation: isolate;
 
     .container {
         max-width: 1200px;
@@ -77,6 +137,8 @@ main.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 // About section
@@ -189,6 +251,18 @@ h2 {
     margin-bottom: 3rem;
 }
 
+// Additional blog section resets
+.blog-section {
+    .entry-header {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
 // Contact page specific styles
 .contact-section {
     padding: 2rem 0;
@@ -247,45 +321,70 @@ h2 {
 .post-entry {
     position: relative;
     padding: 1.5rem;
-    border: 1px solid #dbdbdb;
-    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
     background-color: #fff;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        border-color: #3273dc;
+    }
 
     .entry-header {
-        margin-bottom: 0.75rem;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 0 1rem 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
 
         h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.4rem;
+            font-weight: 700;
             margin: 0;
-            color: #000;
+            color: #1a1a1a;
+            line-height: 1.3;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
         }
     }
 
     .entry-content {
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
 
         p {
-            color: #333;
+            color: #555;
             line-height: 1.6;
-            margin: 0.25rem 0;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
         }
 
         .location-info {
             color: #666;
-            font-size: 0.95rem;
-            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            margin-top: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
 
             i {
-                margin-right: 0.3rem;
+                color: #999;
+                width: 14px;
+                text-align: center;
             }
         }
     }
 
     .entry-footer {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
         color: #666;
+        padding-top: 0.75rem;
+        border-top: 1px solid #f0f0f0;
 
         a {
             color: #3273dc;
@@ -293,8 +392,11 @@ h2 {
             position: relative;
             z-index: 2;
             pointer-events: auto;
+            font-weight: 500;
+            transition: color 0.2s ease;
 
             &:hover {
+                color: #1e5bb8;
                 text-decoration: underline;
             }
         }
@@ -322,18 +424,22 @@ h2 {
 // Internship card styles
 .internship-card {
     position: relative;
-    border: 1px solid #dbdbdb;
-    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        border-color: #3273dc;
+        z-index: 2;
     }
 
     .internship-image {
@@ -354,44 +460,60 @@ h2 {
     }
 
     .internship-content {
-        padding: 1.25rem;
+        padding: 1.5rem;
         flex: 1;
         display: flex;
         flex-direction: column;
+        gap: 0.75rem;
     }
 
     .entry-header {
-        margin-bottom: 0.75rem;
-
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
+        
         .position-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #000;
-            margin: 0 0 0.4rem 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.3;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
         }
 
         .company-name {
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 500;
             margin: 0;
-            color: #555;
+            color: #3273dc;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
         }
     }
 
     .entry-content {
-        p {
-            font-size: 0.85rem;
-            margin: 0.25rem 0;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
 
         .location-info,
         .date-info {
             color: #666;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
 
             i {
-                margin-right: 0.4rem;
                 color: #999;
+                width: 14px;
+                text-align: center;
             }
         }
     }
@@ -402,7 +524,7 @@ h2 {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 10;
+        z-index: 3;
         cursor: pointer;
     }
 }
@@ -418,8 +540,8 @@ h2 {
 .project-card {
     position: relative;
     padding: 1.5rem;
-    border: 1px solid #dbdbdb;
-    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -427,35 +549,56 @@ h2 {
     max-height: 250px;
     overflow: hidden;
     cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        border-color: #3273dc;
+        z-index: 2;
+    }
 
     .entry-header {
-        margin-bottom: 0.75rem;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 0 1rem 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
 
         h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+            font-weight: 700;
             margin: 0;
-            color: #000;
+            color: #1a1a1a;
+            line-height: 1.3;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
         }
     }
 
     .entry-content {
         flex: 1;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
         overflow: visible;
 
         p {
-            color: #333;
+            color: #555;
             line-height: 1.6;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin: 0;
         }
     }
 
     .entry-footer {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         color: #666;
         margin-top: auto;
+        padding-top: 0.75rem;
+        border-top: 1px solid #f0f0f0;
 
         a {
             color: #3273dc;
@@ -463,14 +606,18 @@ h2 {
             position: relative;
             z-index: 2;
             pointer-events: auto;
+            font-weight: 500;
+            transition: color 0.2s ease;
 
             &:hover {
+                color: #1e5bb8;
                 text-decoration: underline;
             }
         }
 
         strong {
             color: #333;
+            font-weight: 600;
         }
     }
 
@@ -480,7 +627,7 @@ h2 {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 3;
         cursor: pointer;
     }
 }
