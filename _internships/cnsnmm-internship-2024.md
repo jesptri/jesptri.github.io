@@ -30,7 +30,7 @@ I’m especially grateful to some friends from <a href="https://www.isae-supaero
 
 ## 🧰 Tech Stack
 
-- **Streamlit (Python)**, **FastAPI**, **Docker**, **PostgreSQL**, **Selenium**
+- **Streamlit (Python)**, **FastAPI**, **Docker**, **PostgreSQL**, **GitLab CI**, **Selenium**
 
 ---
 
