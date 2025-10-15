@@ -5,6 +5,7 @@
   date: "August 2025"
   location: "Luxembourg City, Luxembourg"
   url: "/internships/athenastudio-internship-2025/"
+  company_url: "https://www.linkedin.com/company/athena-studio-io/"
   image: "athenastudio_good_logo.jpg"
 
 - id: salomon_internship_2025
@@ -14,6 +15,7 @@
   date: "February 2025 - July 2025"
   location: "Annecy, France"
   url: "/internships/salomon-internship-2025/"
+  company_url: "https://www.salomon.com"
   image: "salomon_good_logo.jpg"
 
 - id: cnsnmm_internship_2024
@@ -23,4 +25,5 @@
   date: "February 2024 - July 2024"
   location: "Prémanon, France"
   url: "/internships/cnsnmm-internship-2024/"
+  company_url: "https://www.cnsnmm.sports.gouv.fr"
   image: "ffs_good_logo.jpg"

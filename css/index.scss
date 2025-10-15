@@ -390,7 +390,7 @@ h2 {
             color: #3273dc;
             text-decoration: none;
             position: relative;
-            z-index: 2;
+            z-index: 4;
             pointer-events: auto;
             font-weight: 500;
             transition: color 0.2s ease;
@@ -494,6 +494,21 @@ h2 {
             background: none !important;
             border: none !important;
             padding: 0 !important;
+
+            a {
+                color: #3273dc;
+                text-decoration: none;
+                position: relative;
+                z-index: 4;
+                pointer-events: auto;
+                font-weight: 500;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: #1e5bb8;
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
@@ -604,7 +619,7 @@ h2 {
             color: #3273dc;
             text-decoration: none;
             position: relative;
-            z-index: 2;
+            z-index: 4;
             pointer-events: auto;
             font-weight: 500;
             transition: color 0.2s ease;
