@@ -6,7 +6,7 @@ permalink: /internships/athenastudio-internship-2025/
 
 ## 🚀 About Athena Studio
 
-<a href="https://www.linkedin.com/company/athena-studio-io/"><strong>Athena Studio</strong></a> is a dynamic startup based in Luxembourg. Located in a collaborative open-space environment shared with 30 other innovative startups, the atmosphere brings together exceptionally talented and passionate individuals from diverse backgrounds.
+<a href="https://www.linkedin.com/company/athena-studio-io/"><strong>Athena Studio</strong></a> is a dynamic startup based in Luxembourg. Located in a collaborative open-space environment shared with 30 other innovative startups, the atmosphere brings together talented and passionate individuals from diverse backgrounds.
 
 ---
 
@@ -16,7 +16,7 @@ This internship opportunity came at the end of my gap year, just one month befor
 
 The internship was structured in two phases:
 - **August**: Full-time intensive work period
-- **September onwards**: Part-time commitment (10 hours/week) alongside my studies, a common practice during the final year to accelerate professional experience
+- **September to the end of October**: Part-time commitment (10 hours/week) alongside my studies, a common practice during the final year to accelerate professional experience
 
 ---
 
@@ -44,13 +44,12 @@ The learning ratio during this one-month intensive period was remarkably high, I
 **CI/CD Pipeline with GitHub Actions**
 - Configured automated CI pipeline with GitHub Actions
 - Set up automated testing and deployment workflows
-- Ensured code quality and reliability through automated checks
 
 **AI-Powered Analytics Dashboard**
 - Conceived and developed a dashboard to monitor AI agent usage
-- Leveraged AI tools (like Cursor) to accelerate frontend development while maintaining code quality
+- Leveraged AI tools (Cursor) to accelerate frontend development while maintaining code quality
 - Defined key KPIs and implemented effective data visualization to facilitate understanding of product usage patterns
-- Integrated an AI agent to extract key topics from user messages, providing valuable insights into user behavior and needs
+- Integrated an AI agent to extract key topics from user messages
 
 **Key Learning**: Even when using AI tools, having a **solid understanding of the framework is crucial**, and **properly testing the code remains a major priority**.
 
@@ -62,8 +61,7 @@ I will be working on a **Machine Learning use case** focused on automatically pr
 
 ## 🧰 Tech Stack
 
-- TypeScript (Node.js, Next.js/React)
-- Zod library for schema validation
+- TypeScript
 - Vitest for integration tests
 - GitHub Actions for CI/CD
 - Langchain for LLM integration
