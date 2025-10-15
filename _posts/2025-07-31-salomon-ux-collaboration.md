@@ -71,8 +71,6 @@ Although I wasn’t involved in this phase directly (it's planned for after the 
 
 This experience was a major highlight of my internship. As a future engineer, being involved in **user-centered research** gave me a deeper understanding of what truly makes a feature valuable. It also emphasized how much thoughtful design work happens **before a single line of code is written**.
 
-The collaboration helped bridge the gap between **technical feasibility** and **user needs** — an essential step for building software that actually works in the real world.
-
 ---
 
 ## 📸 Media
