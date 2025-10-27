@@ -37,7 +37,7 @@ I coordinated with INSEP's architects and engineers, learned Docker over a coupl
 
 Not only had I failed to document my code properly, but I also recognized that my implementation was syntactically poor and unoptimized. Code reviews during my time at Salomon had sharpened my eye for quality. I asked myself questions I should have asked earlier: Why use lists of lists when a simple hashmap would improve both code clarity and computational complexity?
 
-I revisited the Data Structures course from my first year at ISAE-SUPAERO and realized how much growth still lay ahead. Good code isn't just about making things work—it's about making them maintainable, readable, and efficient.
+I revisited the Data Structures course from my first year at ISAE-SUPAERO and realized how much growth still lay ahead. Good code isn't just about making things work; it's about making them maintainable, readable, and efficient.
 
 ## Looking Ahead to Season Two
 
