@@ -1,10 +1,14 @@
 ---
 layout: post
 title: "What I Learned from Working with a UX Designer at Salomon"
-date: 2025-07-28
+emoji: "🎨"
+date: 2025-07-31
+reading_time: 10
+author: "Jules Espinoux"
 tags: ["UX", "Mobile", "Flutter"]
 image: "/images/salomon.jpg"
 permalink: /blog/salomon-ux-collaboration/
+excerpt: "How competitor analysis, runner interviews, and ideation workshops revealed the importance of user-centered design before coding."
 ---
 
 <!-- ## 🧭 From Tech to Insight: A UX-Led Approach -->
