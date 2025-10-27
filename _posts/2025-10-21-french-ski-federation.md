@@ -43,7 +43,7 @@ I revisited the Data Structures course from my first year at ISAE-SUPAERO and re
 
 My final year at school focuses heavily on data science, and I constantly find myself thinking of models and KPIs that could add value to the platform. Recently, I met with my manager to review UX/UI improvements and discuss potential new features, as I'm writing these notes I'm still working on the platform during my free time and I'm looking forward to season 2!
 
-There's also a new project on the horizon—but that's a story for another post!
+There's also a new project on the horizon, but that's a story for another post!
 
 
 
