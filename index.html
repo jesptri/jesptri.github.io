@@ -38,6 +38,7 @@ layout: null
       <nav class="navbar">
         <ul>
           <li><a href="./" class="nav-item nav-item-active">About</a></li>
+          <li><a href="./projects.html" class="nav-item">Projects</a></li>
           <li><a href="./blog.html" class="nav-item">Blog</a></li>
           <li><a href="./contact.html" class="nav-item">Contact</a></li>
         </ul>
@@ -92,29 +93,6 @@ layout: null
       </div>
     </section>
 
-    <section id="projects" class="projects-section">
-      <h2>Projects</h2>
-
-    <div class="projects-grid">
-      {% for project in site.data.projects %}
-      <article class="project-card">
-        <header class="entry-header">
-          <h2>{{ project.title }}</h2>
-        </header>
-        <section class="entry-content">
-          <p>{{ project.description }}</p>
-        </section>
-        <footer class="entry-footer">
-          {% if project.venue %}<strong>{{ project.venue }}</strong><br>{% endif %}
-          {% if project.github %}<a href="https://github.com/{{ project.github }}" target="_blank">GitHub</a>{% endif %}
-          {% if project.project_page %} • <a href="{{ project.project_page }}" target="_blank">Docs</a>{% endif %}
-          {% if project.report %} • <a href="{{ project.report }}" target="_blank">Report</a>{% endif %}
-        </footer>
-        <a class="entry-link" href="{% if project.github %}https://github.com/{{ project.github }}{% elsif project.project_page %}{{ project.project_page }}{% elsif project.event_website %}{{ project.event_website }}{% endif %}"></a>
-      </article>
-      {% endfor %}
-    </div>
-    </section>
   </main>
 
   <footer class="container">

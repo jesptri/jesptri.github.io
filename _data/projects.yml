@@ -1,3 +1,8 @@
+- id: ml-authors
+  title: "📚 Author Prediction"
+  description: "Machine learning algorithms to predict authorship of Victorian-era text excerpts using Bag-of-Words, TF-IDF, and classifiers like Naive Bayes and SVM."
+  github: jesptri/ML-Authors
+
 - id: turbokmeans
   title: "🚀 TurboKMeans"
   description: "Parallelization of an image compression algorithm using OpenMP for high performance computing."

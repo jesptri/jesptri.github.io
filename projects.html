@@ -1,0 +1,80 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+<head>
+    <meta name="ROBOTS" content="INDEX,FOLLOW">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ site.name }} - Projects</title>
+    <meta name="description" content="{{ site.name }}'s projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="name">
+                <h1><a href="./">{{ site.name }}</a></h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./" class="nav-item">About</a></li>
+                    <li><a href="./projects.html" class="nav-item nav-item-active">Projects</a></li>
+                    <li><a href="./blog.html" class="nav-item">Blog</a></li>
+                    <li><a href="./contact.html" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="projects-section">
+            <div class="projects-page-header">
+                <h1>💻 My Projects</h1>
+                <p class="projects-intro">
+                    Here are some of the projects I've worked on. They showcase my interests in algorithms, data science, and software development.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                {% for project in site.data.projects %}
+                <article class="project-card">
+                    <header class="entry-header">
+                        <h2>{{ project.title }}</h2>
+                    </header>
+                    <section class="entry-content">
+                        <p>{{ project.description }}</p>
+                    </section>
+                    <footer class="entry-footer">
+                        {% if project.venue %}<strong>{{ project.venue }}</strong><br>{% endif %}
+                        {% if project.github %}<a href="https://github.com/{{ project.github }}" target="_blank">GitHub</a>{% endif %}
+                        {% if project.project_page %} • <a href="{{ project.project_page }}" target="_blank">Docs</a>{% endif %}
+                        {% if project.report %} • <a href="{{ project.report }}" target="_blank">Report</a>{% endif %}
+                        {% if project.event_website %} • <a href="{{ project.event_website }}" target="_blank">Event</a>{% endif %}
+                    </footer>
+                    <a class="entry-link" href="{% if project.github %}https://github.com/{{ project.github }}{% elsif project.project_page %}{{ project.project_page }}{% elsif project.event_website %}{{ project.event_website }}{% endif %}"></a>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <p style="text-align: center; margin-top: 2rem; padding: 2rem 0; color: #666;">
+            © {{ site.name }} - {{ "now" | date: "%Y" }}
+        </p>
+    </footer>
+</body>
+</html>
+
