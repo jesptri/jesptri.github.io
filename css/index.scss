@@ -79,37 +79,54 @@ body:has(.projects-section) {
 
 // Header and Navigation
 header {
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 1rem 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e8e8e8;
     position: sticky;
     top: 0;
     z-index: 9999;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     isolation: isolate;
+    height: 180px;
 
     .container {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 0 2rem;
+        padding: 0 3rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 100%;
+        position: relative;
+    }
+
+    .name {
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     .name h1 {
-        font-size: 1.5rem;
+        font-size: 2.25rem;
         font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0;
+        line-height: 1.2;
         
         a {
-            color: #000;
+            color: #0a0a0a;
             text-decoration: none;
-            line-height: 1.2;
+            transition: color 0.2s ease;
             
             &:hover {
-                color: #3273dc;
+                color: #1a1a1a;
             }
         }
+    }
+
+    .navbar {
+        position: absolute;
+        bottom: 0;
+        right: 3rem;
     }
 
     .navbar ul {
@@ -117,21 +134,29 @@ header {
         list-style: none;
         gap: 2rem;
         margin: 0;
+        padding: 0;
     }
 
     .nav-item {
-        color: #666;
+        color: #0a0a0a;
         text-decoration: none;
         font-weight: 400;
-        transition: color 0.3s;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.1rem;
+        display: inline-block;
+        line-height: 1;
         
         &:hover {
-            color: #000;
+            color: #0a0a0a;
         }
 
         &.nav-item-active {
-            color: #000;
-            font-weight: 600;
+            color: #0a0a0a;
+            font-weight: 500;
+            border-bottom: 2px solid #0a0a0a;
         }
     }
 }
