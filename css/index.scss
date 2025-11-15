@@ -66,11 +66,18 @@ header.entry-header {
     outline: none !important;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body:has(.projects-section) {
@@ -87,6 +94,7 @@ header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     isolation: isolate;
     height: 180px;
+    flex-shrink: 0;
 
     .container {
         max-width: 1100px;
@@ -168,6 +176,7 @@ main.container {
     padding: 2rem;
     position: relative;
     z-index: 1;
+    flex: 1;
 }
 
 // About section
@@ -254,6 +263,10 @@ h2 {
 
 .portrait {
     overflow: hidden;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 .footer .footer-links a {
