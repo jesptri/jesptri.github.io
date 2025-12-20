@@ -13,6 +13,11 @@
   description: "Parallelization of an image compression algorithm."
   github: jesptri/HPC-OpenMP
 
+- id: hpc-mpi
+  title: "⚡ HPC-MPI"
+  description: "Parallel solution of the heat equation on a 2D grid using MPI."
+  github: jesptri/HPC-MPI
+
 - id: sokoban
   title: "🧩 Sokoban game"
   description: "Sokoban game with two automatic solver versions."
