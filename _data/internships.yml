@@ -1,10 +1,19 @@
+---
+- id: salomon_mission_2026
+  title: "Data Consultant for Salomon"
+  position: "Data Consultant"
+  organization: "Salomon"
+  date: "05-09 January 2026"
+  location: "Annecy, France"
+  company_url: "https://www.salomon.com"
+
 - id: athenastudio_internship_2025
   title: "Software Engineer at Athena Studio"
   position: "Software Engineer"
   organization: "Athena Studio"
   date: "August 2025 - October 2025"
   location: "Luxembourg City, Luxembourg"
-  url: "/internships/athenastudio-internship-2025/"
+  url: "/blog/athenastudio-internship-2025/"
   company_url: "https://www.linkedin.com/company/athena-studio-io/"
   image: "athenastudio_good_logo.jpg"
 
@@ -14,7 +23,7 @@
   organization: "Salomon"
   date: "February 2025 - July 2025"
   location: "Annecy, France"
-  url: "/internships/salomon-internship-2025/"
+  url: "/blog/salomon-internship-2025/"
   company_url: "https://www.salomon.com"
   image: "salomon_good_logo.jpg"
 
@@ -24,6 +33,6 @@
   organization: "Fédération Française de Ski"
   date: "February 2024 - July 2024"
   location: "Prémanon, France"
-  url: "/internships/cnsnmm-internship-2024/"
+  url: "/blog/cnsnmm-internship-2024/"
   company_url: "https://www.cnsnmm.sports.gouv.fr"
   image: "ffs_good_logo.jpg"

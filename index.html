@@ -68,31 +68,24 @@ layout: null
       </p>
     </section>
 
-    <section id="internships" class="internships-section">
-      <h2>Internships</h2>
-      
-      <div class="internships-grid">
+    <section class="experience-section">
+      <h2>Experience</h2>
+      <div class="experience-list">
         {% for internship in site.data.internships %}
-        <article class="internship-card">
-          <div class="internship-image">
-            <img src="/images/{{ internship.image }}" alt="{{ internship.organization }} logo">
-          </div>
-          <div class="internship-content">
-            <header class="entry-header">
-              <h3 class="position-title">{{ internship.position }}</h3>
-              <h2 class="company-name">{% if internship.company_url %}<a href="{{ internship.company_url }}" target="_blank">{{ internship.organization }}</a>{% else %}{{ internship.organization }}{% endif %}</h2>
-            </header>
-            <section class="entry-content">
-              <p class="location-info"><i class="fas fa-map-marker-alt"></i> {{ internship.location }}</p>
-              <p class="date-info"><i class="far fa-calendar"></i> {{ internship.date }}</p>
-            </section>
-          </div>
-          <a class="entry-link" href="{{ internship.url }}"></a>
+        <article class="experience-item">
+          <h3 class="position-title">
+            {{ internship.position }} –
+            {% if internship.company_url %}
+              <a href="{{ internship.company_url }}" target="_blank">{{ internship.organization }}</a>
+            {% else %}
+              {{ internship.organization }}
+            {% endif %}
+          </h3>
+          <p class="date-location">{{ internship.date }} · {{ internship.location }}</p>
         </article>
         {% endfor %}
       </div>
     </section>
-
   </main>
 
   <footer class="container">
@@ -104,3 +97,5 @@ layout: null
 </body>
 
 </html>
+
+

@@ -220,6 +220,69 @@ main.container {
     }
 }
 
+// Experience section on About page
+.experience-section {
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem 2.5rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8e8e8;
+}
+
+.experience-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.experience-item {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.experience-item::before {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.55rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3273dc;
+}
+
+.experience-item:not(:last-child) {
+    border-left: 2px solid #e5e5e5;
+    padding-bottom: 1rem;
+}
+
+.position-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.position-title a {
+    color: #0a0a0a;
+    text-decoration: none;
+}
+
+.position-title a:hover {
+    text-decoration: underline;
+}
+
+.date-location {
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
 // Section titles
 h2 {
     font-size: 2rem;
