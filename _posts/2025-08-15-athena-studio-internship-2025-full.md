@@ -42,8 +42,6 @@ The learning ratio during this one-month intensive period was remarkably high, I
 
 ## 🛠️ What I Worked On
 
-### The Luxembourg Month (August)
-
 **Integration Testing & API Development**
 - Set up comprehensive integration tests for Microsoft features
 - Implemented end-to-end API testing to ensure robust system reliability
@@ -59,10 +57,6 @@ The learning ratio during this one-month intensive period was remarkably high, I
 - Integrated an AI agent to extract key topics from user messages
 
 **Key Learning**: Even when using AI tools, having a **solid understanding of the framework is crucial**, and **properly testing the code remains a major priority**.
-
-### The Part-Time Period (Starting September)
-
-I will be working on a **Machine Learning use case** focused on automatically predicting size charts. This project aligns with my final year at ISAE-SUPAERO, which emphasizes AI and Machine Learning concepts.
 
 ---
 
