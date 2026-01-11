@@ -2,7 +2,7 @@
 layout: post
 title: "What I Learned from Working with a UX Designer at Salomon"
 emoji: "🎨"
-date: 2025-07-31
+date: 2025-08-10
 reading_time: 10
 author: "Jules Espinoux"
 tags: ["UX", "Mobile", "Flutter"]

@@ -2,7 +2,7 @@
 layout: post
 title: "Internship at Athena Studio (2025)"
 emoji: "🚀"
-date: 2025-08-15
+date: 2025-10-28
 reading_time: 7
 author: "Jules Espinoux"
 tags: [Startup, TypeScript, Testing, AI, Dashboard]

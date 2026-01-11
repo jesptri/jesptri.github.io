@@ -2,7 +2,7 @@
 layout: post
 title: "Internship at CNSNMM (2024)"
 emoji: "🎿"
-date: 2024-07-01
+date: 2024-12-02
 reading_time: 6
 author: "Jules Espinoux"
 tags: [Biathlon, Data Platform, Analytics, Docker]

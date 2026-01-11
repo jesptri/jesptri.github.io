@@ -2,7 +2,7 @@
 layout: post
 title: "My Work for the French Ski Federation"
 emoji: "⛷️"
-date: 2025-10-21
+date: 2025-11-21
 reading_time: 8
 author: "Jules Espinoux"
 tags: [Biathlon, Data Engineering, Web Scraping, DevOps]

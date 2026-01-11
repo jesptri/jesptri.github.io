@@ -2,7 +2,7 @@
 layout: post
 title: "Internship at Salomon (2025)"
 emoji: "🏔️"
-date: 2025-03-01
+date: 2025-08-04
 reading_time: 7
 author: "Jules Espinoux"
 tags: [Mobile, Flutter, Serverless, UX, CI\CD]
