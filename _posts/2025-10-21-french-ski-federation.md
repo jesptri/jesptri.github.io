@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Work for the French Ski Federation"
+title: "My Work for the French Ski Federation (1st season)"
 emoji: "⛷️"
 date: 2025-11-21
 reading_time: 8
