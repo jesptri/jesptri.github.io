@@ -103,6 +103,7 @@ header {
 
     .container {
         max-width: 1100px;
+        width: 100%;
         margin: 0 auto;
         padding: 0 3rem;
         display: flex;
@@ -176,7 +177,7 @@ header {
 
 // Main container
 main.container {
-    max-width: 100%;
+    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
     padding: 2rem 3rem;
@@ -189,9 +190,8 @@ main.container {
 .about {
     margin-bottom: 3rem;
     padding: 2rem 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: none;
 
     h1 {
         font-size: 2rem;
@@ -223,7 +223,7 @@ main.container {
 // Experience section on About page
 .experience-section {
     max-width: 1200px;
-    margin: 0 auto 3rem auto;
+    margin: 0 0 3rem 0;
     padding: 0 0 2rem 0;
     background-color: transparent;
     border-top: 1px solid #e8e8e8;
@@ -427,7 +427,7 @@ footer {
 .inner {
     margin-bottom: 1.5rem;
     max-width: 1200px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
 }
 
@@ -533,7 +533,7 @@ footer {
     gap: 1.5rem;
     margin-top: 1.5rem;
     max-width: 1400px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
 }
 
@@ -667,7 +667,7 @@ footer {
     gap: 1.5rem;
     margin-top: 2rem;
     max-width: 1400px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     
     // Limiter à 4 cards maximum par ligne
@@ -751,9 +751,9 @@ footer {
     padding: 3rem 0;
 
     .projects-page-header {
-        text-align: center;
+        text-align: left;
         max-width: 800px;
-        margin: 0 auto 3rem;
+        margin: 0 0 3rem 0;
         padding: 0 1rem;
 
         h1 {
@@ -774,86 +774,91 @@ footer {
     }
 }
 
-.project-block {
-    .project-title {
-        width: fit-content;
-        margin: 0 !important;
-        font-weight: 600;
-        font-size: 110% !important;
+// (Previously had legacy .project-block styles, removed as unused)
 
-        a { color: #000 }
-    }
+// Mobile responsiveness tweaks
+@media (max-width: 768px) {
+    header {
+        height: auto;
 
-    .project-venue {
-        color: #555;
-        width: fit-content;
-        margin-top: 0;
-    }
-
-    .project-venue-emph {
-        font-style: normal;
-        font-size: 80%;
-        font-weight: 500;
-        color: firebrick;
-        padding-left: 0.25em;
-    }
-
-    .project-awards {
-        color: firebrick;
-        width: fit-content;
-        font-weight: bolder;
-    }
-
-    .project-authors {
-        .author-me {
-            color: #000;
-            font-weight: 600;
+        .container {
+            padding: 0 1.5rem;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
         }
 
-        a {
-            color: #000 !important;
+        .name {
+            padding-top: 1rem;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .name h1 {
+            font-size: 1.9rem;
         }
-    }
 
-    .project-image {
-        border-radius: 2%;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        font-size: 0;
-
-        img {
+        .navbar {
+            position: static;
+            margin-top: 1rem;
             width: 100%;
         }
-    }
 
-    .project-mousecell {
-        position: relative;
-        font-size: 0;
-    }
-
-    .project-mousecell {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        overflow: hidden;
-
-        video {
-            display: none;
+        .navbar ul {
+            flex-wrap: wrap;
+            gap: 1rem;
         }
     }
 
-    .project-description {
-        color: #333;
-        margin: 0.5em 0;
+    main.container {
+        padding: 1.75rem 1.5rem;
     }
 
-    .project-links {
-        margin: 0 !important;
-        margin-top: 0.5em !important;
+    .about {
+        padding: 1.5rem 0;
+    }
+
+    .contact-section {
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        .container {
+            padding: 0 1rem;
+        }
+
+        .navbar ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .contact-section h1,
+    .projects-section .projects-page-header h1 {
+        font-size: 2rem;
+    }
+
+    .projects-section .projects-page-header .projects-intro {
+        font-size: 1rem;
+    }
+
+    .contact-section .contact-item {
+        align-items: flex-start;
+    }
+
+    .contact-section .contact-item .icon {
+        margin-top: 0.15rem;
+    }
+
+    .internships-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .internship-media-grid figure {
+        min-width: 100%;
+    }
+
+    main.container {
+        padding: 1.5rem 1.25rem;
     }
 }
