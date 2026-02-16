@@ -11,14 +11,12 @@ permalink: /blog/salomon-ux-collaboration/
 excerpt: "How competitor analysis, runner interviews, and ideation workshops revealed the importance of user-centered design before coding."
 ---
 
-<!-- ## 🧭 From Tech to Insight: A UX-Led Approach -->
-
 As part of my **software engineer internship at Salomon**, I had the opportunity to work closely with a **UX Designer** on the early stages of product ideation for a new mobile application. 
 Our mission was to design **features that matter to runners**.
 
 ---
 
-## 📱 1. Competitor Analysis: Mapping the Landscape
+## 1. Competitor Analysis: Mapping the Landscape
 
 We began by conducting an in-depth **benchmark of existing mobile apps** in the running and outdoor sports space:
 
@@ -34,7 +32,7 @@ This analysis gave us both **design inspiration** (by noticing interesting featu
 
 ---
 
-## 🗣️ 2. Interviews with Trail Runners
+## 2. Interviews with Trail Runners
 
 To go deeper and get a better undestanding of what trail runners waiting for their training app, we prepared and ran a **series of qualitative interviews** with a wide range of runners. The process included:
 
@@ -46,7 +44,7 @@ This phase helped us cluster runners into **3–4 typical profiles**, which were
 
 ---
 
-## 💡 3. Ideation Workshops with Trail Runners
+## 3. Ideation Workshops with Trail Runners
 
 We then hosted **ideation sessions** with trail runners. We explored **feature possibilities** based on insights from the interviews:
 
@@ -61,7 +59,7 @@ Following the sessions, I co-led a **synthesis** phase with the UX designer to o
 
 ---
 
-## 🎨 4. What’s Next: Prototyping  
+## 4. What’s Next: Prototyping  
 
 Although I wasn’t involved in this phase directly (it's planned for after the end of my internship), we outlined a roadmap for:
 
@@ -71,13 +69,13 @@ Although I wasn’t involved in this phase directly (it's planned for after the 
 
 ---
 
-## 🚀 Reflection
+## Reflection
 
 This experience was a major highlight of my internship. As a future engineer, being involved in **user-centered research** gave me a deeper understanding of what truly makes a feature valuable. It also emphasized how much thoughtful design work happens **before a single line of code is written**.
 
 ---
 
-## 📸 Media
+## Media
 
 <figure style="text-align: center; max-width: 600px; margin: auto;">
   <img src="/images/workshop_salomon.jpg" alt="UX Workshop at Salomon" style="width: 50%; border-radius: 8px;">

@@ -11,13 +11,13 @@ permalink: /blog/athenastudio-internship-2025/
 excerpt: "My internship at Athena Studio in Luxembourg: integration tests, CI/CD, and an AI-powered analytics dashboard in a fast-paced startup."
 ---
 
-## 🚀 About Athena Studio
+## About Athena Studio
 
 <a href="https://www.linkedin.com/company/athena-studio-io/"><strong>Athena Studio</strong></a> is a dynamic startup based in Luxembourg. Located in a collaborative open-space environment shared with 30 other innovative startups, the atmosphere brings together talented and passionate individuals from diverse backgrounds.
 
 ---
 
-## 🎯 Context & Motivation
+## Context & Motivation
 
 This internship opportunity came at the end of my gap year, just one month before starting my final year at <a href="https://www.isae-supaero.fr/" target="_blank">**ISAE-SUPAERO**</a>. I was actively seeking an internship experience in a startup environment, preferably outside of France, to broaden my international perspective and gain hands-on experience in a fast-paced tech environment.
 
@@ -27,7 +27,7 @@ The internship was structured in two phases:
 
 ---
 
-## 👥 Team & Collaboration
+## Team & Collaboration
 
 I had the privilege of working with an exceptional team that significantly enhanced my learning experience:
 
@@ -40,7 +40,7 @@ The learning ratio during this one-month intensive period was remarkably high, I
 
 ---
 
-## 🛠️ What I Worked On
+## What I Worked On
 
 **Integration Testing & API Development**
 - Set up comprehensive integration tests for Microsoft features
@@ -60,7 +60,7 @@ The learning ratio during this one-month intensive period was remarkably high, I
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - TypeScript
 - Vitest for integration tests
@@ -71,7 +71,7 @@ The learning ratio during this one-month intensive period was remarkably high, I
 
 ---
 
-## 🌍 International Experience
+## International Experience
 
 Working in Luxembourg's startup ecosystem provided a unique international perspective. The multicultural environment, combined with **daily English communication**, significantly improved my professional communication skills and cultural adaptability.
 

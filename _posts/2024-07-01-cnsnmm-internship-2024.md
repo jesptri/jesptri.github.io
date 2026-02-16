@@ -11,13 +11,13 @@ permalink: /blog/cnsnmm-internship-2024/
 excerpt: "How I built a full-stack analytics platform for the French Ski Federation at CNSNMM, from scraping race data to supporting World Cup coaches."
 ---
 
-## 🏔️ About CNSNMM
+## About CNSNMM
 
 The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre National de Ski Nordique et de Moyenne Montagne**</a> (CNSNMM) is France’s national hub for Nordic skiing and mountain sports. Located in the Jura Mountains, the center focuses on high-performance athlete development and is home to the **French national teams** in **biathlon**, **cross-country skiing**, **ski jumping**, and **nordic combined**. The CNSNMM plays a key role in preparing athletes for international competition 🌍.
 
 ---
 
-## 🛠️ What I Worked On
+## What I Worked On
 
 - I developed a full-stack analytics platform **from scratch**, tailored to the needs of national coaches. The tool provided new insights into athlete race performance 📊.
 
@@ -27,7 +27,7 @@ The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre Nationa
 
 ---
 
-## 🧠 Challenges & Learnings
+## Challenges & Learnings
 
 This was my **first professional experience**, and I was the only technical person on site. Without direct engineering support, I had to quickly become self-reliant and resourceful.
 
@@ -35,20 +35,20 @@ I am especially grateful to some friends from <a href="https://www.isae-supaero.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Streamlit (Python)**, **FastAPI**, **Docker**, **PostgreSQL**, **GitLab CI**, **Selenium**
 
 ---
 
-## 🎿 Fun Facts
+## Fun Facts
 
 - I had the chance to go cycling with the French women national team during a training camp at the CNSNMM (definitely one of the best group rides of my life!).  
 - Simon FOURCADE, former biathlon champion (Martin FOURCADE, his brother is a former biathlon world champion) and national coach, called me while I was on a flight back from my Erasmus semester in Ireland (to fix missing data on the dashboard).
 
 ---
 
-## 📸 Media
+## Media
 <div class="internship-media-grid">
   <figure style="text-align: center; max-width: 400px; margin: auto;">
     <img src="/images/coaches_app.jpg" alt="French national coaches using analytics tool" style="width: 100%; border-radius: 8px;">

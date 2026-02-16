@@ -11,13 +11,13 @@ permalink: /blog/salomon-internship-2025/
 excerpt: "During my 6-month internship at Salomon, I worked on a beta mobile app, managed environments, CI/CD, and collaborated closely with UX and data teams."
 ---
 
-## 🏔️ About Salomon
+## About Salomon
 
 <a href="https://www.salomon.com"><strong>Salomon</strong></a> is a global leader in outdoor sports gear, known for its high-performance products in trail running, skiing, hiking, and more. Headquartered in Annecy, in the heart of the French Alps, the brand sits at the intersection of innovation, technology, and user-centered design.
 
 ---
 
-## 📱 What I Worked On
+## What I Worked On
 
 During this 6-month internship, I was part of the **IT team**.
 
@@ -31,7 +31,7 @@ During this 6-month internship, I was part of the **IT team**.
 
 ---
 
-## 👥 Collaboration & Teamwork
+## Collaboration & Teamwork
 
 This experience was markedly different from my previous internship at CNSNMM.
 
@@ -43,19 +43,19 @@ I had the chance to work with:
 
 - **PhD students** working on AI-based training plans. I integrated their data collection requirements into the app to support the future implementation of their algorithms.
 
-- I took part in **daily Agile stand-ups** within the broader IT team, which helped me build a solid understanding of Agile methodology 📅.
+- I took part in **daily Agile stand-ups** within the broader IT team, which helped me build a solid understanding of Agile methodology.
 
 - Beyond my direct tasks, I proactively engaged with various IT professionals at Salomon, including **developers**, **DevOps**, **IT architects**, **data scientists**, **data engineers**, **analysts**, and **product owners**. These discussions gave me invaluable insights into both **Salomon’s tech landscape** and its overall business model.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Flutter**, **Node.js**, **AWS**, **Serverless**, **GitLab CI/CD**, **Fastlane**
 
 ---
 
-<!-- ## 📸 Media
+<!-- ## Media let's add it soon
 
 <figure style="text-align: center; max-width: 400px; margin: auto;">
   <img src="/images/salomon-app.jpg" alt="Salomon Beta App UI" style="width: 100%; border-radius: 8px;">
