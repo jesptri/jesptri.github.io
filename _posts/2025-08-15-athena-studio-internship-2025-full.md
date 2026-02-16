@@ -77,7 +77,7 @@ Working in Luxembourg's startup ecosystem provided a unique international perspe
 
 ---
 
-## 📸 Media
+## Media
 
 <div class="internship-media-grid">
   <figure style="text-align: center; max-width: 400px; margin: auto;">
