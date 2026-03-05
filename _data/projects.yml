@@ -1,39 +1,44 @@
+- id: kaggle-sdd-vision
+  title: "Kaggle SDD Vision"
+  description: "Predicting Andrena bee species from images in a highly imbalanced dataset."
+  github: jesptri/Beeeesss
+
 - id: kaggle-sdd-machine-learning
-  title: "📚 Kaggle SDD Machine Learning"
+  title: "Kaggle SDD Machine Learning"
   description: "Predicting heart attack risk in a large, unbalanced health dataset."
   github: jesptri/Kaggle-Heart-Risk
 
 - id: ml-authors
-  title: "📚 Author Prediction"
+  title: "Author Prediction"
   description: "Machine learning algorithms to predict authorship of Victorian-era text excerpts."
   github: jesptri/ML-Authors
 
 - id: turbokmeans
-  title: "🚀 TurboKMeans"
+  title: "TurboKMeans"
   description: "Parallelization of an image compression algorithm."
   github: jesptri/HPC-OpenMP
 
 - id: hpc-mpi
-  title: "⚡ HPC-MPI"
+  title: "HPC-MPI"
   description: "Parallel solution of the heat equation on a 2D grid using MPI."
   github: jesptri/HPC-MPI
 
 - id: sokoban
-  title: "🧩 Sokoban game"
+  title: "Sokoban game"
   description: "Sokoban game with two automatic solver versions."
   github: jesptri/Sokoban
   project_page: "spec_sokoban_project_supaero.pdf"
   image: sokoban.jpg
 
 - id: Hack Days ENS
-  title: "🏆 Hack Days ENS"
+  title: "Hack Days ENS"
   description: "European hackathon with 300+ participants designing digital solutions for public good."
   event_website: https://hackdays.numerique.gouv.fr/
   github: jesptri/Hack-days-ENS
   image: ens_logo.jpg
 
 - id: SQL
-  title: "🗄️ SQL project"
+  title: "SQL project"
   description: "Database design and querying project completed during Erasmus at University of Limerick."
   github: jesptri/Database_Systems
   project_page: 'spec_sql_project_UL.pdf'
