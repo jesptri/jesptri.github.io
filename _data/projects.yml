@@ -1,6 +1,6 @@
 - id: kaggle-sdd-vision
   title: "Kaggle SDD Vision"
-  description: "Predicting Andrena bee species from images in a highly imbalanced dataset."
+  description: "Kaggle competition: bee species image classification across 47 classes with a severely imbalanced dataset."
   github: jesptri/Beeeesss
 
 - id: kaggle-sdd-machine-learning

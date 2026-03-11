@@ -13,15 +13,15 @@ excerpt: "How I built a full-stack analytics platform for the French Ski Federat
 
 ## About CNSNMM
 
-The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre National de Ski Nordique et de Moyenne Montagne**</a> (CNSNMM) is France’s national hub for Nordic skiing and mountain sports. Located in the Jura Mountains, the center focuses on high-performance athlete development and is home to the **French national teams** in **biathlon**, **cross-country skiing**, **ski jumping**, and **nordic combined**. The CNSNMM plays a key role in preparing athletes for international competition 🌍.
+The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre National de Ski Nordique et de Moyenne Montagne**</a> (CNSNMM) is France’s national hub for Nordic skiing and mountain sports. Located in the Jura Mountains, the center focuses on high-performance athlete development and is home to the **French national teams** in **biathlon**, **cross-country skiing**, **ski jumping**, and **nordic combined**. The CNSNMM plays a key role in preparing athletes for international competition.
 
 ---
 
 ## What I Worked On
 
-- I developed a full-stack analytics platform **from scratch**, tailored to the needs of national coaches. The tool provided new insights into athlete race performance 📊.
+- I developed a full-stack analytics platform **from scratch**, tailored to the needs of national coaches. The tool provided new insights into athlete race performance.
 
-- I worked closely with the French national biathlon staff to deliver detailed data reports ahead of the <a href="https://lenzerheide2025.ch/" target="_blank">**2025 Biathlon World Championships**</a> in Lenzerheide (Switzerland), where the team achieved a **record number of medals** 🥇.
+- I worked closely with the French national biathlon staff to deliver detailed data reports ahead of the <a href="https://lenzerheide2025.ch/" target="_blank">**2025 Biathlon World Championships**</a> in Lenzerheide (Switzerland), where the team achieved a **record number of medals**.
 
 - I was also involved in scientific monitoring activities, including support during **altitude simulation (hypoxia) sessions**, contributing to performance tracking and athlete adaptation protocols.
 
@@ -31,7 +31,7 @@ The <a href="https://www.cnsnmm.sports.gouv.fr" target="_blank">**Centre Nationa
 
 This was my **first professional experience**, and I was the only technical person on site. Without direct engineering support, I had to quickly become self-reliant and resourceful.
 
-I am especially grateful to some friends from <a href="https://www.isae-supaero.fr/" target="_blank">**ISAE-SUPAERO**</a> 🎓, whose expertise I could regularly draw on, as well as to a few teachers who provided valuable feedback throughout the project. These interactions, combined with the hands-on nature of the work, significantly accelerated my learning curve.
+I am especially grateful to some friends from <a href="https://www.isae-supaero.fr/" target="_blank">**ISAE-SUPAERO**</a>, whose expertise I could regularly draw on, as well as to a few teachers who provided valuable feedback throughout the project. These interactions, combined with the hands-on nature of the work, significantly accelerated my learning curve.
 
 ---
 
