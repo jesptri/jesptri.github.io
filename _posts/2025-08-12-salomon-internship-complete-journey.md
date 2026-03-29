@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Internship at Salomon (2025): Engineering Delivery and UX Collaboration"
+title: "Internship at Salomon (2025)"
 emoji: "🏔️"
 date: 2025-08-12
-reading_time: 15
+reading_time: 9
 author: "Jules Espinoux"
 tags: [Mobile, Flutter, Serverless, UX, CI\CD]
 image: "/images/salomon-app.jpg"
