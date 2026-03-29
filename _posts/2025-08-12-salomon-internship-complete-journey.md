@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Internship at Salomon (2025): Engineering Delivery and UX Collaboration"
-emoji: "🏔️🎨"
+emoji: "🏔️"
 date: 2025-08-12
 reading_time: 15
 author: "Jules Espinoux"
 tags: [Mobile, Flutter, Serverless, UX, CI\CD]
 image: "/images/salomon-app.jpg"
 permalink: /blog/salomon-internship-2025/
-excerpt: "A complete overview of my 6-month internship at Salomon, from engineering delivery and CI/CD to competitor analysis, runner interviews, and UX workshops."
+excerpt: "A complete overview of my 6-month internship at Salomon, from engineering delivery to competitor analysis, runner interviews, and UX workshops."
 ---
 
 ## About Salomon
