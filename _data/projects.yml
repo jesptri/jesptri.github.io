@@ -1,3 +1,8 @@
+- id: quantization-demo
+  title: "🎥 Quantization Demo"
+  description: "Quantization demo: vulgarization of a research paper with LLM.int8() mixed precision and outlier handling."
+  github: jesptri/Quantization-Article
+
 - id: kaggle-sdd-vision
   title: "🐝 Kaggle SDD Vision"
   description: "Kaggle competition: bee species image classification across 47 classes with a severely imbalanced dataset."
@@ -33,19 +38,13 @@
   description: "Sokoban game with two automatic solver versions."
   github: jesptri/Sokoban
   project_page: "spec_sokoban_project_supaero.pdf"
-  image: sokoban.jpg
 
 - id: Hack Days ENS
   title: "💡 Hack Days ENS"
   description: "European hackathon with 300+ participants designing digital solutions for public good."
   event_website: https://hackdays.numerique.gouv.fr/
   github: jesptri/Hack-days-ENS
-  image: ens_logo.jpg
-
 - id: SQL
   title: "🗄️ SQL project"
   description: "Database design and querying project completed during Erasmus at University of Limerick."
   github: jesptri/Database_Systems
-  project_page: 'spec_sql_project_UL.pdf'
-  report: 'report_sql_project_UL.pdf'
-  image: database.jpg
