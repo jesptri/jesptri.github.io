@@ -80,6 +80,12 @@ body {
     flex-direction: column;
 }
 
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
 // Pour les pages utilisant section (post.html et internship.html)
 body > section {
     flex: 1;
@@ -781,25 +787,32 @@ footer {
 @media (max-width: 768px) {
     header {
         height: auto;
+        position: static;
 
         .container {
             padding: 0 1.5rem;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
+            gap: 0.75rem;
+            min-height: 120px;
+            padding-top: 1rem;
+            padding-bottom: 0.75rem;
         }
 
         .name {
-            padding-top: 1rem;
+            padding-top: 0;
+            height: auto;
         }
 
         .name h1 {
-            font-size: 1.9rem;
+            font-size: 1.75rem;
+            line-height: 1.15;
         }
 
         .navbar {
             position: static;
-            margin-top: 1rem;
+            margin-top: 0;
             width: 100%;
         }
 
@@ -813,12 +826,55 @@ footer {
         padding: 1.75rem 1.5rem;
     }
 
+    .projects-section {
+        padding: 2rem 0;
+    }
+
+    .projects-section .projects-page-header {
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+
+    .projects-section .projects-page-header h1 {
+        font-size: 2rem;
+    }
+
+    .projects-section .projects-page-header .projects-intro {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .projects-grid,
+    .internships-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .project-card,
+    .internship-card,
+    .post-entry {
+        min-height: 0;
+    }
+
     .about {
         padding: 1.5rem 0;
     }
 
     .contact-section {
         padding: 1.5rem 0;
+    }
+
+    .contact-section h1 {
+        font-size: 2rem;
+    }
+
+    .contact-section .contact-item {
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .contact-section .contact-item .icon {
+        margin-top: 0.15rem;
     }
 }
 
@@ -829,18 +885,21 @@ footer {
         }
 
         .navbar ul {
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
             align-items: flex-start;
+            column-gap: 0.9rem;
+            row-gap: 0.55rem;
         }
     }
 
     .contact-section h1,
     .projects-section .projects-page-header h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .projects-section .projects-page-header .projects-intro {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .contact-section .contact-item {
@@ -849,10 +908,6 @@ footer {
 
     .contact-section .contact-item .icon {
         margin-top: 0.15rem;
-    }
-
-    .internships-grid {
-        grid-template-columns: 1fr;
     }
 
     .internship-media-grid figure {
