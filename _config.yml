@@ -20,13 +20,12 @@
 
 title: Jules ESPINOUX
 name: Jules ESPINOUX
-position: Student in Data Science and Software Engineering
+position: Software Engineer Intern at Mistral AI
 email: julespinoux@gmail.com
 description: |
-  Final-year engineering student at [**ISAE-SUPAERO**](https://www.isae-supaero.fr/), specializing in **Data Science**. I enjoy building reliable software and working at the intersection of **AI** and **software engineering**.
+  Software Engineer Intern at **Mistral AI** and final-year engineering student at [**ISAE-SUPAERO**](https://www.isae-supaero.fr/). I enjoy building reliable software at the intersection of AI and software engineering.
 
-  Alongside my studies, I occasionally contribute as an independent data engineer to projects with the **French Ski Federation**, continuing a collaboration initiated during my gap-year internship in a high-performance sports context.
-
+  Alongside my studies, I occasionally contribute as an independent engineer to projects with the **French Ski Federation**, extending a collaboration initiated during my gap-year internship in a high-performance sports context.
 collections:
   internships:
     output: true
