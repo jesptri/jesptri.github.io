@@ -1,4 +1,11 @@
----
+- id: salomon_mission_2026
+  title: "Software Engineer Intern at Mistral AI"
+  position: "Software Engineer Intern"
+  organization: "Mistral AI"
+  date: "April 2026 - Today"
+  location: "Paris, France"
+  company_url: "https://iamistral.com/"
+
 - id: salomon_mission_2026
   title: "Data Consultant for Salomon"
   position: "Data Consultant"
