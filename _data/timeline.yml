@@ -1,0 +1,65 @@
+# Timeline events - most recent first
+# Types: work, education
+# post_slug must match the Jekyll post filename (without date prefix and .md)
+
+- date: "Apr 2026 – Present"
+  title: "SWE Intern"
+  organization: "Mistral AI"
+  type: work
+  current: true
+  location: "Paris, France"
+  description: "Building AI-powered developer tools at one of Europe's leading AI companies."
+  url: "https://mistral.ai/"
+
+- date: "Jan 2026"
+  title: "Data Consultant"
+  organization: "Salomon"
+  type: work
+  location: "Annecy, France"
+  description: "Short-term data consulting mission."
+  url: "https://www.salomon.com"
+  post_slug: "salomon-mission"
+
+- date: "Aug – Oct 2025"
+  title: "SWE Intern"
+  organization: "Athena Studio"
+  type: work
+  location: "Luxembourg City, Luxembourg"
+  description: "Full-stack development for a gaming startup."
+  url: "https://www.linkedin.com/company/athena-studio-io/"
+  post_slug: "athena-studio-internship-2025-full"
+
+- date: "Feb – Jul 2025"
+  title: "SWE Intern"
+  organization: "Salomon"
+  type: work
+  location: "Annecy, France"
+  description: "Software engineering for sports performance analysis."
+  url: "https://www.salomon.com"
+  post_slug: "salomon-internship-complete-journey"
+
+- date: "Feb – Jul 2024"
+  title: "SWE Intern"
+  organization: "French Ski Federation"
+  type: work
+  location: "Premanon, France"
+  description: "Building software tools for high-performance sports training."
+  url: "https://www.cnsnmm.sports.gouv.fr"
+  post_slug: "cnsnmm-internship-2024"
+
+# Education — update dates if needed
+- date: "Fall 2024"
+  title: "Erasmus Exchange"
+  organization: "University of Limerick"
+  type: education
+  location: "Limerick, Ireland"
+  description: "Semester abroad studying Computer Science."
+  url: "https://www.ul.ie/"
+
+- date: "2022 – 2026"
+  title: "Engineering Degree"
+  organization: "ISAE-SUPAERO"
+  type: education
+  location: "Toulouse, France"
+  description: "Specialization in AI and Software Engineering."
+  url: "https://www.isae-supaero.fr/"
