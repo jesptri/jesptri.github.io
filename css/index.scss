@@ -1,299 +1,493 @@
 ---
 ---
 
-// Global styles
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// ============================================
+// Custom Properties
+// ============================================
+:root {
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text: #111827;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
+  --border: #e5e7eb;
+  --success: #10b981;
+  --success-light: #ecfdf5;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-w: 800px;
+  --max-w-wide: 1100px;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-// Reset entry-header elements to remove any default styling
-.entry-header {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: block !important;
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-// Additional reset for header elements
-header.entry-header {
-    all: unset !important;
-    display: block !important;
-}
-
-// Specific reset for blog entries
-.post-entry .entry-header {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    
-    h2 {
-        background: none !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-}
-
-// Reset for Bulma classes that might interfere
-.title, .subtitle {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-// Ensure blog post titles don't have containers
-.post-entry .entry-header h2,
-.blog .entry-header h2 {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-html {
-    height: 100%;
-}
+// ============================================
+// Reset & Base
+// ============================================
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { height: 100%; }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: var(--font);
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
 }
 
-img,
-video {
-    max-width: 100%;
-    height: auto;
+img, video { max-width: 100%; height: auto; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+  &:hover { color: var(--accent-hover); }
 }
 
-// Pour les pages utilisant section (post.html et internship.html)
-body > section {
-    flex: 1;
-}
+body > section { flex: 1; }
 
-body:has(.projects-section) {
-    background-color: #f0f1f3;
-}
+// ============================================
+// Header & Navigation
+// ============================================
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
 
-// Header and Navigation
-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e8e8e8;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    isolation: isolate;
-    height: 180px;
-    flex-shrink: 0;
-
-    .container {
-        max-width: 1100px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 3rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        position: relative;
-    }
-
-    .name {
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
-
-    .name h1 {
-        font-size: 2.25rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        margin: 0;
-        line-height: 1.2;
-        
-        a {
-            color: #0a0a0a;
-            text-decoration: none;
-            transition: color 0.2s ease;
-            
-            &:hover {
-                color: #1a1a1a;
-            }
-        }
-    }
-
-    .navbar {
-        position: absolute;
-        bottom: 0;
-        right: 3rem;
-    }
-
-    .navbar ul {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-item {
-        color: #0a0a0a;
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 1rem;
-        transition: all 0.2s ease;
-        border-bottom: 2px solid transparent;
-        padding-bottom: 0.25rem;
-        margin-bottom: 0.1rem;
-        display: inline-block;
-        line-height: 1;
-        
-        &:hover {
-            color: #0a0a0a;
-        }
-
-        &.nav-item-active {
-            color: #0a0a0a;
-            font-weight: 500;
-            border-bottom: 2px solid #0a0a0a;
-        }
-    }
-}
-
-// Main container
-main.container {
-    max-width: 1100px;
-    width: 100%;
+  .header-inner {
+    max-width: var(--max-w-wide);
     margin: 0 auto;
-    padding: 2rem 3rem;
-    position: relative;
-    z-index: 1;
-    flex: 1;
-}
-
-// About section
-.about {
-    margin-bottom: 3rem;
-    padding: 2rem 0;
-    width: 100%;
-    max-width: none;
-
-    h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-
-    .content p {
-        margin-bottom: 1rem;
-        line-height: 1.8;
-    }
-
-    .social-links {
-        margin-top: 1.5rem;
-
-        .icon {
-            font-size: 1.8rem;
-            color: #333;
-            margin-right: 1rem;
-            transition: color 0.3s;
-
-            &:hover {
-                color: #3273dc;
-            }
-        }
-    }
-}
-
-// Experience section on About page
-.experience-section {
-    max-width: 1200px;
-    margin: 0 0 3rem 0;
-    padding: 0 0 2rem 0;
-    background-color: transparent;
-    border-top: 1px solid #e8e8e8;
-}
-
-.experience-list {
+    padding: 0 2rem;
+    height: 64px;
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-logo {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    &:hover { color: var(--text); }
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      &:hover { color: var(--text); }
+      &.active { color: var(--text); border-bottom-color: var(--text); }
+    }
+  }
 }
 
-.experience-item {
-    padding: 0.25rem 0;
+// ============================================
+// Main Content
+// ============================================
+main.container {
+  max-width: var(--max-w-wide) !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 3rem 2rem !important;
+  flex: 1;
 }
 
-.experience-item:not(:last-child) {
-    border-bottom: 1px solid #f0f0f0;
+// ============================================
+// Buttons
+// ============================================
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  line-height: 1.4;
 }
 
-.position-title {
-    font-size: 1.05rem;
+.btn-primary {
+  background: var(--text);
+  color: #fff;
+  &:hover { background: #374151; color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+}
+
+.btn-outline {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  &:hover { border-color: #c4c8cc; box-shadow: var(--shadow); color: var(--text); }
+}
+
+// ============================================
+// Hero Section (Homepage)
+// ============================================
+.hero {
+  padding: 3rem 0;
+
+  .hero-title {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-greeting {
+    font-size: 3rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  .hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
     font-weight: 500;
-}
-
-.position-title a {
-    color: #3273dc;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.position-title a:hover {
-    color: #2450a8;
-    text-decoration: underline;
-}
-
-.date-location {
-    margin-top: 0.25rem;
-    font-size: 0.95rem;
-    color: #555;
-}
-
-// Section titles
-h2 {
-    font-size: 2rem;
-    font-weight: 700;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
-    margin-top: 2rem;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--text-tertiary);
+    animation: status-blink 2s ease-in-out infinite;
+  }
+
+  @keyframes status-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-bio {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.75rem;
+
+    p {
+      margin-bottom: 0.75rem;
+      &:last-child { margin-bottom: 0; }
+    }
+    a { font-weight: 600; }
+    strong { color: var(--text); font-weight: 600; }
+  }
+
+  .hero-social {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+
+    a {
+      color: var(--text);
+      font-size: 1.5rem;
+      transition: color 0.2s;
+      &:hover { color: var(--text-secondary); }
+    }
+  }
 }
 
-.title {
-    font-family: 'Open Sans', sans-serif;
+// ============================================
+// Timeline — Vertical
+// ============================================
+.timeline-section {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.timeline-col {
+  > h2 {
+    font-size: 1rem;
     font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.button.is-big {
-  font-size: 1.5rem;     /* Taille du texte */
-  padding: 1rem 1.5rem;  /* Espacement interne */
-  height: auto;          /* Laisse le bouton s'étendre */
+$marker-size: 10px;
+$rail-x: 4px; // half of marker-size, so rail sits dead-center under marker
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  // vertical rail — centred on the marker
+  &::before {
+    content: '';
+    position: absolute;
+    left: $rail-x;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
 }
 
-.button.is-big .icon {
-  font-size: 1.75rem;    /* Taille de l’icône */
+.timeline-item {
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  position: relative;
+
+  &:last-child { padding-bottom: 0; }
 }
 
+.timeline-node {
+  flex-shrink: 0;
+  width: $marker-size;
+  margin-top: 4px; // align marker with first text line
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-line { display: none; }
+
+.timeline-marker {
+  width: $marker-size;
+  height: $marker-size;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1.5px var(--accent);
+  flex-shrink: 0;
+
+  .timeline-education & {
+    background: var(--success);
+    box-shadow: 0 0 0 1.5px var(--success);
+  }
+}
+
+
+
+.timeline-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.timeline-date {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-details {
+  h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.15rem; color: var(--text); line-height: 1.3; }
+
+  .timeline-org {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+    a { color: var(--text-secondary); &:hover { color: var(--accent); } }
+  }
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  &.badge-current { background: var(--accent-light); color: var(--accent); }
+  &.badge-education { background: var(--success-light); color: var(--success); }
+}
+
+.timeline-blog-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  &:hover { color: var(--accent-hover); text-decoration: underline; }
+}
+
+// ============================================
+// Latest Posts (Homepage)
+// ============================================
+.latest-posts {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+
+    h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+    .see-all { font-size: 0.875rem; font-weight: 500; }
+  }
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.post-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+
+  &:hover { border-color: #c4c8cc; box-shadow: var(--shadow); transform: translateY(-2px); }
+
+  .post-date { font-size: 0.8rem; color: var(--text-tertiary); font-weight: 500; }
+  h3 { font-size: 1rem; font-weight: 700; margin: 0.5rem 0; line-height: 1.3; color: var(--text); }
+  p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; flex: 1; margin-bottom: 0.75rem; }
+  .post-link { font-size: 0.85rem; font-weight: 500; }
+}
+
+// ============================================
+// Projects Page
+// ============================================
+.projects-section {
+  padding: 1rem 0;
+
+  .projects-page-header {
+    margin-bottom: 2rem;
+    h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+    .projects-intro { color: var(--text-secondary); line-height: 1.7; }
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover { border-color: #c4c8cc; box-shadow: var(--shadow); transform: translateY(-2px); }
+
+  .entry-header { margin-bottom: 0.5rem; h2 { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.3; } }
+  .entry-content { flex: 1; p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; } }
+  .entry-footer { display: none; }
+  .entry-link { position: absolute; inset: 0; z-index: 1; }
+}
+
+// ============================================
+// Blog Page
+// ============================================
+.blog-list {
+  > h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+}
+
+.blog-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog-entry {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover { border-color: #c4c8cc; box-shadow: var(--shadow); transform: translateY(-1px); }
+
+  h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text); }
+  .blog-excerpt { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem; }
+  .blog-meta { font-size: 0.8rem; color: var(--text-tertiary); }
+  .entry-link { position: absolute; inset: 0; z-index: 1; }
+}
+
+// ============================================
+// Contact Page
+// ============================================
+.contact-section {
+  padding: 1rem 0;
+
+  h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+  .contact-intro { color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7; }
+
+  .contact-list { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.95rem;
+    color: var(--text);
+
+    .icon { font-size: 1.25rem; color: var(--text-tertiary); width: 24px; text-align: center; }
+    strong { font-weight: 600; margin-right: 0.25rem; }
+    a { color: var(--text); &:hover { color: var(--accent); } }
+  }
+}
+
+// ============================================
+// Post/Article Pages (Bulma compatibility)
+// ============================================
 .internship-media-grid {
   display: flex;
   flex-wrap: wrap;
@@ -304,617 +498,45 @@ h2 {
     flex: 1;
     min-width: 300px;
     margin: 0;
-
-    img, video {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
-    figcaption {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 0.5em;
-      text-align: center;
-    }
+    img, video { width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+    figcaption { font-size: 0.9em; color: var(--text-secondary); margin-top: 0.5em; text-align: center; }
   }
 }
 
-.portrait {
-    overflow: hidden;
-}
+.portrait { overflow: hidden; }
+.button.is-big { font-size: 1.5rem; padding: 1rem 1.5rem; height: auto; }
+.button.is-big .icon { font-size: 1.75rem; }
+.footer .footer-links a { font-size: 1.25rem; color: var(--text); }
+.footer .button.is-small { padding: 0.2rem; height: 2rem; width: 4rem; }
+.footer .button.is-small .icon { margin: 0; font-size: 2rem; }
 
-footer {
-    flex-shrink: 0;
-    margin-top: auto;
-}
+// ============================================
+// Footer
+// ============================================
+footer, .footer { flex-shrink: 0; margin-top: auto; }
+.site-footer { text-align: center; padding: 2rem 0; color: var(--text-tertiary); font-size: 0.85rem; }
 
-// S'assurer que le footer Bulma se comporte aussi correctement
-.footer {
-    flex-shrink: 0;
-    margin-top: auto;
-}
-
-.footer .footer-links a {
-    font-size: 25px;
-    color: #000;
-}
-
-.footer .button.is-small {
-  padding: 0.2rem;
-  height: 2rem;
-  width: 4rem;
-}
-
-.footer .button.is-small .icon {
-  margin: 0;
-  font-size: 2rem;
-}
-
-// Sections
-.internships-section,
-.blog-section,
-.projects-section,
-.contact-section {
-    margin-bottom: 3rem;
-}
-
-// Additional blog section resets
-.blog-section {
-    .entry-header {
-        background: none !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: none !important;
-        outline: none !important;
-    }
-}
-
-// Contact page specific styles
-.contact-section {
-    padding: 2rem 0;
-    max-width: 900px;
-
-    h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: #0a0a0a;
-    }
-
-    .contact-intro {
-        font-size: 1.1rem;
-        margin-bottom: 2.5rem;
-        color: #0a0a0a;
-        line-height: 1.6;
-    }
-
-    .contact-list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        max-width: 100%;
-    }
-
-    .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 1rem;
-        color: #0a0a0a;
-
-        .icon {
-            font-size: 1.5rem;
-            color: #0a0a0a;
-            min-width: 30px;
-        }
-
-        strong {
-            color: #0a0a0a;
-            font-weight: 600;
-            margin-right: 0.5rem;
-        }
-
-        a {
-            color: #0a0a0a;
-            text-decoration: none;
-            font-weight: 400;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-// Post entry styles (for Internships, Projects, Blog)
-.inner {
-    margin-bottom: 1.5rem;
-    max-width: 1200px;
-    margin-left: 0;
-    margin-right: auto;
-}
-
-.post-entry {
-    position: relative;
-    padding: 1.5rem;
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    background-color: #fff;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    transition: all 0.3s ease;
-
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        border-color: #3273dc;
-    }
-
-    .entry-header {
-        background: none !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 0 0 1rem 0 !important;
-        box-shadow: none !important;
-        outline: none !important;
-
-        h2 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin: 0;
-            color: #1a1a1a;
-            line-height: 1.3;
-            background: none !important;
-            border: none !important;
-            padding: 0 !important;
-        }
-    }
-
-    .entry-content {
-        margin-bottom: 1rem;
-
-        p {
-            color: #555;
-            line-height: 1.6;
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .location-info {
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-
-            i {
-                color: #999;
-                width: 14px;
-                text-align: center;
-            }
-        }
-    }
-
-    .entry-footer {
-        font-size: 0.9rem;
-        color: #666;
-        padding-top: 0.75rem;
-        border-top: 1px solid #f0f0f0;
-
-        a {
-            color: #3273dc;
-            text-decoration: none;
-            position: relative;
-            z-index: 4;
-            pointer-events: auto;
-            font-weight: 500;
-            transition: color 0.2s ease;
-
-            &:hover {
-                color: #1e5bb8;
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .entry-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        cursor: pointer;
-    }
-}
-
-// Internships grid layout
-.internships-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    max-width: 1400px;
-    margin-left: 0;
-    margin-right: auto;
-}
-
-// Internship card styles
-.internship-card {
-    position: relative;
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-
-    &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        border-color: #3273dc;
-        z-index: 2;
-    }
-
-    .internship-image {
-        width: 100%;
-        height: 160px;
-        overflow: hidden;
-        background-color: #f9f9f9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-    }
-
-    .internship-content {
-        padding: 1.5rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .entry-header {
-        background: none !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        box-shadow: none !important;
-        outline: none !important;
-        
-        .position-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 0 0 0.5rem 0;
-            line-height: 1.3;
-            background: none !important;
-            border: none !important;
-            padding: 0 !important;
-        }
-
-        .company-name {
-            font-size: 1rem;
-            font-weight: 500;
-            margin: 0;
-            color: #3273dc;
-            background: none !important;
-            border: none !important;
-            padding: 0 !important;
-
-            a {
-                color: #3273dc;
-                text-decoration: none;
-                position: relative;
-                z-index: 4;
-                pointer-events: auto;
-                font-weight: 500;
-                transition: color 0.2s ease;
-
-                &:hover {
-                    color: #1e5bb8;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-
-    .entry-content {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
-        .location-info,
-        .date-info {
-            color: #666;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-
-            i {
-                color: #999;
-                width: 14px;
-                text-align: center;
-            }
-        }
-    }
-
-    .entry-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        cursor: pointer;
-    }
-}
-
-// Projects grid layout (for homepage and projects page)
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    max-width: 1400px;
-    margin-left: 0;
-    margin-right: auto;
-    
-    // Limiter à 4 cards maximum par ligne
-    @media (min-width: 1400px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.project-card {
-    position: relative;
-    padding: 1.5rem 1.25rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    min-height: 200px;
-    cursor: pointer;
-    z-index: 1;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-    transition: all 0.25s ease;
-
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-        border-color: #c4c8cc;
-        z-index: 2;
-    }
-
-    .entry-header {
-        background: none !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 0 0 0.75rem 0 !important;
-        box-shadow: none !important;
-        outline: none !important;
-
-        h2 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin: 0;
-            color: #000000;
-            line-height: 1.3;
-            background: none !important;
-            border: none !important;
-            padding: 0 !important;
-            letter-spacing: -0.01em;
-        }
-    }
-
-    .entry-content {
-        flex: 1;
-        margin-bottom: 0;
-
-        p {
-            color: #6b7280;
-            line-height: 1.55;
-            font-size: 0.875rem;
-            margin: 0;
-            font-weight: 400;
-        }
-    }
-
-    .entry-footer {
-        display: none;
-    }
-
-    .entry-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        cursor: pointer;
-    }
-}
-
-// Projects page styling
-.projects-section {
-    padding: 3rem 0;
-
-    .projects-page-header {
-        text-align: left;
-        max-width: 1100px;
-        width: 100%;
-        margin: 0 0 3rem 0;
-        padding: 0 1rem;
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #0a0a0a;
-            letter-spacing: -0.02em;
-        }
-
-        .projects-intro {
-            font-size: 1.125rem;
-            color: #64748b;
-            line-height: 1.7;
-            margin: 0;
-            font-weight: 400;
-        }
-    }
-}
-
-// (Previously had legacy .project-block styles, removed as unused)
-
-// Mobile responsiveness tweaks
+// ============================================
+// Responsive
+// ============================================
 @media (max-width: 768px) {
-    header {
-        height: auto;
-        position: static;
-
-        .container {
-            padding: 0 1.5rem;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 0.75rem;
-            min-height: 120px;
-            padding-top: 1rem;
-            padding-bottom: 0.75rem;
-        }
-
-        .name {
-            padding-top: 0;
-            height: auto;
-        }
-
-        .name h1 {
-            font-size: 1.75rem;
-            line-height: 1.15;
-        }
-
-        .navbar {
-            position: static;
-            margin-top: 0;
-            width: 100%;
-        }
-
-        .navbar ul {
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-    }
-
-    main.container {
-        padding: 1.75rem 1.5rem;
-    }
-
-    .projects-section {
-        padding: 2rem 0;
-    }
-
-    .projects-section .projects-page-header {
-        margin-bottom: 2rem;
-        padding: 0;
-    }
-
-    .projects-section .projects-page-header h1 {
-        font-size: 2rem;
-    }
-
-    .projects-section .projects-page-header .projects-intro {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .projects-grid,
-    .internships-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .project-card,
-    .internship-card,
-    .post-entry {
-        min-height: 0;
-    }
-
-    .about {
-        padding: 1.5rem 0;
-    }
-
-    .contact-section {
-        padding: 1.5rem 0;
-    }
-
-    .contact-section h1 {
-        font-size: 2rem;
-    }
-
-    .contact-section .contact-item {
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-
-    .contact-section .contact-item .icon {
-        margin-top: 0.15rem;
-    }
+  .site-header .header-inner { padding: 0 1.25rem; }
+  .site-header .site-nav { gap: 1.25rem; a { font-size: 0.85rem; } }
+  main.container { padding: 2rem 1.25rem !important; }
+  .hero .hero-name { font-size: 2.25rem; }
+  .hero .hero-greeting { font-size: 2.25rem; }
+  .posts-grid, .projects-grid { grid-template-columns: 1fr; }
+  .latest-posts .section-header { flex-direction: column; gap: 0.5rem; }
+  .internship-media-grid figure { min-width: 100%; }
+  .timeline-columns { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 @media (max-width: 480px) {
-    header {
-        .container {
-            padding: 0 1rem;
-        }
-
-        .navbar ul {
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            column-gap: 0.9rem;
-            row-gap: 0.55rem;
-        }
-    }
-
-    .contact-section h1,
-    .projects-section .projects-page-header h1 {
-        font-size: 1.75rem;
-    }
-
-    .projects-section .projects-page-header .projects-intro {
-        font-size: 0.95rem;
-    }
-
-    .contact-section .contact-item {
-        align-items: flex-start;
-    }
-
-    .contact-section .contact-item .icon {
-        margin-top: 0.15rem;
-    }
-
-    .internship-media-grid figure {
-        min-width: 100%;
-    }
-
-    main.container {
-        padding: 1.5rem 1.25rem;
-    }
+  .site-header .header-inner { padding: 0 1rem; height: 56px; }
+  .site-header .site-logo { font-size: 1rem; }
+  .site-header .site-nav { gap: 0.75rem; a { font-size: 0.8rem; } }
+  main.container { padding: 1.5rem 1rem !important; }
+  .hero .hero-name { font-size: 1.75rem; }
+  .hero .hero-greeting { font-size: 1.75rem; }
+  .contact-section .contact-item { align-items: flex-start; .icon { margin-top: 0.15rem; } }
 }

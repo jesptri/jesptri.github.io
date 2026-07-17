@@ -1,99 +1,123 @@
 ---
-layout: null
+layout: default
+nav_active: about
+meta_description: "Jules ESPINOUX"
 ---
-<!DOCTYPE html>
-<html lang="en">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.google_analytics }}');
-</script>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.name }}</title>
-  <meta name="description" content="{{ site.name }}'s homepage">
-  <!-- Font Awesome Icons -->
-  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Main CSS -->
-  <link href="{{ '/css/bulma.min.css' | relative_url }}" rel="stylesheet">
-  <link href="{{ '/css/index.css' | relative_url }}" rel="stylesheet">
 
-  <script defer src="{{ '/js/fontawesome.all.min.js' | relative_url }}"></script>
-</head>
+<section class="hero">
+  <div class="hero-title">
+    <span class="hero-greeting">Hi, I'm</span>
+    <h1 class="hero-name">Jules ESPINOUX</h1>
+  </div>
 
-<body>
-  <header>
-    <div class="container">
-      <div class="name">
-        <h1><a href="./">Jules<br>ESPINOUX</a></h1>
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="./" class="nav-item nav-item-active">About</a></li>
-          <li><a href="./projects.html" class="nav-item">Projects</a></li>
-          <li><a href="./blog.html" class="nav-item">Blog</a></li>
-          <li><a href="./contact.html" class="nav-item">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="hero-status">
+    <span class="status-dot"></span>
+    {{ site.position }}
+  </div>
 
-  <main class="container">
-    <section class="about">
-      <h1>👋 Welcome to my blog</h1>
-      <div class="content">
-        {{ site.description | markdownify }}
-      </div>
-      <p class="social-links">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=julespinoux@gmail.com" target="_blank">
-          <i class="far fa-envelope icon" title="Email"></i>
-        </a>
-        <a href="https://github.com/{{ site.github_username }}" target="_blank">
-          <i class="fab fa-github icon" title="GitHub"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/jules-espinoux/" target="_blank">
-          <i class="fab fa-linkedin icon" title="LinkedIn"></i>
-        </a>
-        <a href="/Jules_ESPINOUX_Resume.pdf" target="_blank">
-          <i class="fas fa-file icon" title="CV"></i>
-        </a>
-      </p>
-    </section>
+  <div class="hero-bio">
+    {{ site.description | markdownify }}
+  </div>
 
-    <section class="experience-section">
-      <h2>Where I have been working</h2>
-      <div class="experience-list">
-        {% for internship in site.data.internships %}
-        <article class="experience-item">
-          <h3 class="position-title">
-            {{ internship.position }} –
-            {% if internship.company_url %}
-              <a href="{{ internship.company_url }}" target="_blank">{{ internship.organization }}</a>
-            {% else %}
-              {{ internship.organization }}
-            {% endif %}
-          </h3>
-          <p class="date-location">{{ internship.date }} · {{ internship.location }}</p>
-        </article>
+  <div class="hero-social">
+    <a href="mailto:{{ site.email }}" title="Email">
+      <i class="far fa-envelope"></i>
+    </a>
+    <a href="{{ '/Jules_ESPINOUX_Resume.pdf' | relative_url }}" target="_blank" title="Resume">
+      <i class="fas fa-file-alt"></i>
+    </a>
+    <a href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/jules-espinoux/" target="_blank" title="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="timeline-columns">
+
+    <div class="timeline-col">
+      <h2>Experience</h2>
+      <div class="timeline">
+        {% assign work_events = site.data.timeline | where: "type", "work" %}
+        {% for event in work_events %}
+        <div class="timeline-item timeline-work{% if event.current %} timeline-current{% endif %}">
+          <div class="timeline-node">
+            <div class="timeline-marker"></div>
+          </div>
+          <div class="timeline-body">
+            <span class="timeline-date">{{ event.date }}</span>
+            <div class="timeline-details">
+              <h3>{{ event.title }}</h3>
+              <p class="timeline-org">
+                {% if event.url %}
+                  <a href="{{ event.url }}" target="_blank">{{ event.organization }}</a>
+                {% else %}
+                  {{ event.organization }}
+                {% endif %}
+              </p>
+              {% if event.current %}
+                <span class="badge badge-current">Current</span>
+              {% endif %}
+              {% if event.post_slug %}
+                {% for post in site.posts %}
+                  {% if post.slug == event.post_slug %}
+                    <a href="{{ post.url }}" class="timeline-blog-link">Read post &rarr;</a>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
         {% endfor %}
       </div>
-    </section>
-  </main>
+    </div>
 
-  <footer class="container">
-    <p style="text-align: center; margin-top: 2rem; padding: 2rem 0; color: #666;">
-      © {{ site.name }} - {{ "now" | date: "%Y" }}
-    </p>
-  </footer>
+    <div class="timeline-col">
+      <h2>Education</h2>
+      <div class="timeline">
+        {% assign edu_events = site.data.timeline | where: "type", "education" %}
+        {% for event in edu_events %}
+        <div class="timeline-item timeline-education">
+          <div class="timeline-node">
+            <div class="timeline-marker"></div>
+          </div>
+          <div class="timeline-body">
+            <span class="timeline-date">{{ event.date }}</span>
+            <div class="timeline-details">
+              <h3>{{ event.title }}</h3>
+              <p class="timeline-org">
+                {% if event.url %}
+                  <a href="{{ event.url }}" target="_blank">{{ event.organization }}</a>
+                {% else %}
+                  {{ event.organization }}
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
 
-</body>
+  </div>
+</section>
 
-</html>
-
-
+<section class="latest-posts">
+  <div class="section-header">
+    <h2>Latest from the blog</h2>
+    <a href="{{ '/blog.html' | relative_url }}" class="see-all">View all &rarr;</a>
+  </div>
+  <div class="posts-grid">
+    {% for post in site.posts limit:3 %}
+    <article class="post-card">
+      <time class="post-date">{{ post.date | date: "%B %Y" }}</time>
+      <h3>{{ post.emoji }} {{ post.title }}</h3>
+      <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      <a href="{{ post.url }}" class="post-link">Read more &rarr;</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>

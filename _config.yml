@@ -37,6 +37,8 @@ collections:
 # twitter_username: username
 github_username: jesptri
 
+google_analytics: "" # Add your GA tracking ID (e.g. G-XXXXXXXXXX)
+
 # Build settings
 # theme: minima
 plugins:

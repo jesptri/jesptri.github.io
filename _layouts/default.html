@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ '/css/index.css' | relative_url }}">
+  {% include analytics.html %}
+  {% include head.html %}
 </head>
 <body>
-  <main>
+  {% include header.html %}
+  <main class="container">
     {{ content }}
   </main>
-  <footer class="footer">
-    <div class="container">
-      <p style="text-align: center; margin-top: 1rem; padding: 1rem 0; color: #666;">
-        © {{ site.name }} - {{ "now" | date: "%Y" }}
-      </p>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>
