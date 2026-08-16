@@ -27,7 +27,7 @@ RUN bundle exec jekyll build
 
 FROM nginx:alpine
 
-# Copier uniquement le résultat du build Jekyll
+# Prend le résultat de Jekyll et le met dans le dossier que Nginx utilise par défaut pour servir des fichiers web
 COPY --from=builder /app/_site/ /usr/share/nginx/html/
 
 EXPOSE 80
