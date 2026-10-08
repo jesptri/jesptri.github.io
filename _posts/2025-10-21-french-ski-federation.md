@@ -6,7 +6,7 @@ date: 2025-11-21
 reading_time: 8
 author: "Jules Espinoux"
 tags: [Biathlon, Data Engineering, Web Scraping, DevOps]
-image: "/images/ffs_good_logo.jpg"
+image: "/assets/images/ffs_good_logo.jpg"
 permalink: /blog/french-ski-federation/
 excerpt: "Building and maintaining the biathlon analytics platform for French coaches. From real-time race data to bug fixes on the go."
 ---
