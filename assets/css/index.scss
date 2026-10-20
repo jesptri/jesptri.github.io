@@ -546,3 +546,96 @@ footer, .footer { flex-shrink: 0; margin-top: auto; }
   .hero .hero-greeting { font-size: 1.5rem; }
   .contact-section .contact-item { align-items: flex-start; .icon { margin-top: 0.15rem; } }
 }
+
+// Compact, neutral portfolio layout
+html { scroll-padding-top: 90px; }
+a:focus-visible { outline: 2px solid var(--text-secondary); outline-offset: 4px; }
+.portfolio-hero {
+  padding: 1.5rem 0 2.75rem;
+  .hero-title { margin-bottom: 1.25rem; }
+  .hero-greeting, .hero-name { font-size: 2.5rem; line-height: 1.1; }
+  .hero-summary { max-width: 900px; font-size: 1.125rem; line-height: 1.65; color: var(--text); margin-bottom: 1.75rem; }
+  .hero-social { gap: 1.25rem; a { font-size: 1.5rem; color: var(--text); &:hover { color: var(--text-secondary); } } }
+}
+.featured-work { padding-bottom: 1.75rem; }
+.work-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; h2 { font-size: 1.1rem; font-weight: 600; letter-spacing: -.015em; } .see-all { font-size: .8rem; color: var(--text-secondary); } }
+.featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem; }
+.work-feature { min-width: 0; display: grid; grid-template-rows: auto auto 1fr; gap: .8rem; }
+.work-copy { h3 { font-size: .95rem; font-weight: 600; line-height: 1.5; margin-bottom: .35rem; span { color: var(--text-secondary); font-weight: 400; } } p { font-size: .9rem; line-height: 1.65; color: var(--text-secondary); } }
+// Shared parent rows align both descriptions, visuals and links.
+@supports (grid-template-rows: subgrid) {
+  .work-feature { grid-row: span 3; grid-template-rows: subgrid; }
+}
+.demo-player, .coaches-photo { aspect-ratio: 16 / 9; overflow: hidden; border-radius: 6px; background: #e5e7eb; }
+.demo-player iframe { display: block; width: 100%; height: 100%; border: 0; }
+.coaches-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.demo-preview { display: block; position: relative; width: 100%; height: 100%; img { display: block; width: 100%; height: 100%; object-fit: cover; } }
+.demo-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 44px; height: 44px; padding-left: 2px; background: #fffffff2; color: #111827; border-radius: 50%; font-size: .9rem; box-shadow: 0 2px 8px #0002; }
+.demo-preview:hover .demo-play { background: #fff; }
+.work-actions { display: flex; flex-wrap: wrap; align-items: start; gap: .5rem 1.25rem; a { font-size: .78rem; color: var(--text-secondary); &:hover { color: var(--text); text-decoration: underline; } } }
+.academic-heading { font-size: 1.1rem; font-weight: 600; margin-bottom: 1.25rem; }
+@media (min-width: 769px) {
+  main.container:has(.portfolio-hero) { padding-top: 1.75rem !important; }
+}
+@media (max-width: 600px) {
+
+  .featured-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .work-feature { grid-row: auto; grid-template-rows: auto auto auto; }
+  .site-header .header-inner { flex-wrap: wrap; height: auto; min-height: 64px; gap: .5rem; padding-top: .7rem; padding-bottom: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+// Restore the original centered width, with small accents for each project.
+body main.container { max-width: 1100px !important; margin: 0 auto !important; padding: 1.75rem 2rem !important; }
+.site-header .header-inner { max-width: 1100px; }
+.portfolio-hero .hero-name { color: #243e63; }
+.portfolio-hero .hero-summary strong { color: var(--text); font-weight: 700; }
+.hero-social a:hover { color: var(--accent) !important; }
+.work-section-heading h2 { color: #243e63; }
+.work-section-heading .see-all { color: var(--accent); }
+.work-feature { padding: 1.25rem; border: 1px solid #e4e8ee; border-radius: 10px; background: #fff; gap: 1rem; align-content: start; }
+.work-copy .project-context { font-size: 1.1rem; font-weight: 700; letter-spacing: -.01em; margin-bottom: .4rem; color: #b4232c; }
+.work-sport .project-context { color: #245bb1; }
+.work-copy h3 { font-size: 1.06rem; margin-bottom: .5rem; }
+// Equal display areas; contain preserves the original image proportions and full content.
+.demo-player, .coaches-photo { display: grid; place-items: center; aspect-ratio: 4 / 3; height: auto; width: 100%; background: #f6f7f9; border-radius: 6px; }
+.demo-preview img, .coaches-photo img { width: 100%; height: 100%; object-fit: contain; }
+.demo-player:has(iframe) { background: #111; }
+.work-mistral .work-actions a { color: #925021; }
+.work-sport .work-actions a { color: #345d8c; }
+.work-actions a:hover { text-decoration: underline; }
+.education-section { padding: 1.5rem 0; border-top: 1px solid var(--border); }
+.education-section > h2, .latest-posts .section-header h2 { font-size: 1.1rem; font-weight: 600; }
+.education-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.education-item { h3 { font-size: .9rem; font-weight: 600; a { color: #345d8c; } } p { font-size: .8rem; line-height: 1.7; color: var(--text-secondary); } }
+@media (max-width: 768px) {
+  body main.container { padding: 1.5rem 1.25rem !important; }
+}
+@media (max-width: 600px) {
+  body main.container { padding: 1.25rem 1rem !important; }
+  .education-grid { grid-template-columns: 1fr; }
+  .demo-player, .coaches-photo { max-height: none; }
+}
+.work-actions { border-top: 1px solid #edf0f3; padding-top: .85rem; gap: .6rem 1.25rem; }
+.work-actions a { font-size: .85rem; font-weight: 500; }
+.work-feature { grid-template-rows: auto auto auto; }
+@supports (grid-template-rows: subgrid) { .work-feature { grid-template-rows: subgrid; } }
+@media (max-width: 600px) { .work-feature { grid-template-rows: auto auto auto; padding: 1rem; } }
+// Extend the article link across its card while retaining one keyboard focus target.
+.latest-posts .post-card {
+  position: relative;
+  .post-link::after { content: ''; position: absolute; inset: 0; border-radius: var(--radius); }
+  &:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
+}
+// Match the original introduction typography at each screen size.
+@media (max-width: 768px) {
+  .portfolio-hero .hero-greeting, .portfolio-hero .hero-name { font-size: 1.875rem; }
+}
+@media (max-width: 480px) {
+  .portfolio-hero .hero-greeting, .portfolio-hero .hero-name { font-size: 1.5rem; }
+}
+@media (max-width: 600px) {
+  .portfolio-hero { padding-top: 1rem; padding-bottom: 2.25rem; }
+  .portfolio-hero .hero-summary { margin-bottom: 1.5rem; }
+}
