@@ -8,8 +8,9 @@
   type: work
   current: true
   location: "Paris, France"
-  description: "Building AI-powered developer tools at one of Europe's leading AI companies."
+  description: "Developed the Connectors Debugger to test MCP servers, diagnose authentication and connection issues, and inspect available tools."
   url: "https://mistral.ai/"
+  project_url: "https://docs.mistral.ai/studio/connectors/debugger"
 
 - date: "Jan 2026"
   title: "Data Consultant"
@@ -43,7 +44,7 @@
   organization: "French Ski Federation"
   type: work
   location: "Premanon, France"
-  description: "Building software tools for high-performance sports training."
+  description: "Built a full-stack race analytics platform for French national coaches; continued maintaining it through the racing season and its migration to INSEP."
   url: "https://www.cnsnmm.sports.gouv.fr"
   post_slug: "cnsnmm-internship-2024"
 
