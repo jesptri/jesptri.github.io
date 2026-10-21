@@ -6,7 +6,7 @@ date: 2025-08-12
 reading_time: 9
 author: "Jules Espinoux"
 tags: [Mobile, Flutter, Serverless, UX, CI\CD]
-image: "/images/salomon-app.jpg"
+image: "/assets/images/salomon-app.jpg"
 permalink: /blog/salomon-internship-2025/
 excerpt: "A complete overview of my 6-month internship at Salomon, from engineering delivery to competitor analysis, runner interviews, and UX workshops."
 ---

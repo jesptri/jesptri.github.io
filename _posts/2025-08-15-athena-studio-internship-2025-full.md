@@ -6,7 +6,7 @@ date: 2025-10-28
 reading_time: 7
 author: "Jules Espinoux"
 tags: [Startup, TypeScript, Testing, AI, Dashboard]
-image: "/images/house_of_startups.jpg"
+image: "/assets/images/house_of_startups.jpg"
 permalink: /blog/athenastudio-internship-2025/
 excerpt: "My internship at Athena Studio in Luxembourg: integration tests, CI/CD, and an AI-powered analytics dashboard in a fast-paced startup."
 ---
@@ -81,14 +81,14 @@ Working in Luxembourg's startup ecosystem provided a unique international perspe
 
 <div class="internship-media-grid">
   <figure style="text-align: center; max-width: 400px; margin: auto;">
-    <img src="/images/luxembourg_city.jpg" alt="Luxembourg City" style="width: 100%; border-radius: 8px;">
+    <img src="/assets/images/luxembourg_city.jpg" alt="Luxembourg City" style="width: 100%; border-radius: 8px;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
       Luxembourg City
     </figcaption>
   </figure>
 
   <figure style="text-align: center; max-width: 400px; margin: auto;">
-    <img src="/images/house_of_startups.jpg" alt="Athena Studio Workspace" style="width: 100%; border-radius: 8px;">
+    <img src="/assets/images/house_of_startups.jpg" alt="Athena Studio Workspace" style="width: 100%; border-radius: 8px;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
       The house of startups
     </figcaption>
@@ -96,7 +96,7 @@ Working in Luxembourg's startup ecosystem provided a unique international perspe
 </div>
 
 <!-- <figure style="text-align: center; max-width: 640px; margin: 2em auto;">
-  <img src="/images/athena-dashboard.jpg" alt="AI Analytics Dashboard" style="width: 100%; border-radius: 8px;">
+  <img src="/assets/images/athena-dashboard.jpg" alt="AI Analytics Dashboard" style="width: 100%; border-radius: 8px;">
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
     AI Analytics Dashboard - monitoring tool for AI agent usage
   </figcaption>

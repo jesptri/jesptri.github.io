@@ -6,7 +6,7 @@ date: 2024-12-02
 reading_time: 6
 author: "Jules Espinoux"
 tags: [Biathlon, Data Platform, Analytics, Docker]
-image: "/images/coaches_app.jpg"
+image: "/assets/images/coaches_app.jpg"
 permalink: /blog/cnsnmm-internship-2024/
 excerpt: "How I built a full-stack analytics platform for the French Ski Federation at CNSNMM, from scraping race data to supporting World Cup coaches."
 ---
@@ -51,14 +51,14 @@ I am especially grateful to some friends from <a href="https://www.isae-supaero.
 ## Media
 <div class="internship-media-grid">
   <figure style="text-align: center; max-width: 400px; margin: auto;">
-    <img src="/images/coaches_app.jpg" alt="French national coaches using analytics tool" style="width: 100%; border-radius: 8px;">
+    <img src="/assets/images/coaches_app.jpg" alt="French national coaches using analytics tool" style="width: 100%; border-radius: 8px;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
       <strong>Simon FOURCADE</strong>, <strong>Cyril BURDET</strong>, and other French coaches using the platform to analyze athlete performance during the Oberhof World Cup (Jan 2025).
     </figcaption>
   </figure>
 
   <figure style="text-align: center; max-width: 400px; margin: auto;">
-    <img src="/images/alex_baudin.jpg" alt="Cycling with Alex Baudin" style="width: 100%; border-radius: 8px;">
+    <img src="/assets/images/alex_baudin.jpg" alt="Cycling with Alex Baudin" style="width: 100%; border-radius: 8px;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
       I had the chance to ride with <strong>Alex Baudin</strong> during his training camp at the CNSNMM. I also supported him during hypoxia sessions. Just a few weeks after, he wore the white jersey at the <strong>Giro d’Italia</strong> for a few days.
     </figcaption>
@@ -67,7 +67,7 @@ I am especially grateful to some friends from <a href="https://www.isae-supaero.
 
 <figure style="text-align: center; max-width: 640px; margin: 2em auto;">
   <video controls style="width: 100%; border-radius: 8px;">
-    <source src="/images/scraper_internship_cnsn.mp4" type="video/mp4">
+    <source src="/assets/images/scraper_internship_cnsn.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 0.5em;">
