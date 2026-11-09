@@ -66,3 +66,9 @@ sass:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Keep deployment and development files out of the public site.
+exclude:
+  - Dockerfile
+  - k8s
+  - README.md

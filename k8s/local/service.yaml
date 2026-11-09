@@ -1,0 +1,14 @@
+apiVersion: v1 # par défaut, pas important
+kind: Service # on veut pas créer un Deployment ici mais un service
+metadata:
+  name: jules-website # donne le nom au service
+
+# partie la plus importante dessous
+spec:
+  selector: # je veux envoyer mes requêtes vers les pods qui ont le label app=jules-website 
+    app: jules-website
+
+  ports:
+    - protocol: TCP
+      port: 80 # ça définit le port sur lequel le service est accessible à l'intérieur du cluster
+      targetPort: 80 # quand le service reçoit une requête, envoie-la vers le port 80 du pod
