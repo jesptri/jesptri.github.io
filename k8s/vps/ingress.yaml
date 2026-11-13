@@ -3,10 +3,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: jules-website
+  namespace: portfolio
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: traefik
+  tls:
+    - hosts:
+        - jespinoux.fr
+      secretName: jules-website-tls
   rules:
-    - http:
+    - host: jespinoux.fr
+      http:
         paths:
           - path: /
             pathType: Prefix
