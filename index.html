@@ -30,7 +30,7 @@ meta_description: "Software engineering for AI and elite sport. Explore my Conne
       <time class="post-date">{{ post.date | date: "%B %Y" }}</time>
       <h3>{{ post.emoji }} {{ post.title }}</h3>
       <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-      <a href="{{ post.url | relative_url }}" class="post-link" aria-label="Read {{ post.title | escape }}">Read more &rarr;</a>
+      <a href="{{ post.url | relative_url }}" class="post-link" data-content="{{ post.slug | escape }}" aria-label="Read {{ post.title | escape }}">Read more &rarr;</a>
     </article>
     {% endfor %}
   </div>

@@ -17,7 +17,7 @@ meta_description: "Jules ESPINOUX's academic projects"
 
   <div class="projects-grid">
     {% for project in site.data.projects %}
-    <article class="project-card">
+    <article class="project-card" data-content="{{ project.id | slugify | escape }}">
       <header class="entry-header">
         <h2>{{ project.title }}</h2>
       </header>

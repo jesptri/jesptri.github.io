@@ -15,7 +15,7 @@ meta_description: "Jules ESPINOUX's blog"
       <p class="blog-meta">
         {{ post.date | date: "%B %d, %Y" }} &middot; {{ post.reading_time }} min read &middot; {{ post.author }}
       </p>
-      <a class="entry-link" href="{{ post.url }}"></a>
+      <a class="entry-link" href="{{ post.url }}" data-content="{{ post.slug | escape }}"></a>
     </article>
     {% endfor %}
   </div>

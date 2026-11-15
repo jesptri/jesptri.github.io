@@ -69,6 +69,7 @@ sass:
 
 # Keep deployment and development files out of the public site.
 exclude:
+  - nginx
   - Dockerfile
   - k8s
   - README.md
